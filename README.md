@@ -1,7 +1,7 @@
 SitefinityResources
 ===================
 
-This repository contains an extract of Sitefinity's basic themes, workflows and templates. For previous versions of the resources see the [Releases ](https://github.com/Sitefinity-SDK/SitefinityResources/releases "SitefinityResources releases")page.
+This repository contains an extract of Sitefinity's basic themes, workflows and templates. For previous versions of the resources see the [Releases](https://github.com/Sitefinity-SDK/SitefinityResources/releases "SitefinityResources releases") page.
 
 Also you can find the API Reference for Visual Studio's Help Viewer here:
 
