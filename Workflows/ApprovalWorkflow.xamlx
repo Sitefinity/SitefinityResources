@@ -70,7 +70,7 @@
       <p1:Variable x:TypeArguments="s:Guid" Name="itemId" />
       <p1:Variable x:TypeArguments="x:String" Name="applicationName" />
       <p1:Variable x:TypeArguments="scg3:Dictionary(x:String, x:String)" Name="contextBag" />
-      <p1:Variable x:TypeArguments="tswm:WorkflowDefinition" Name="workflowDefinition" />
+      <p1:Variable x:TypeArguments="tsw:IWorkflowExecutionDefinition" Name="workflowExecutionDefinition" />
       <p1:Variable x:TypeArguments="x:Boolean" Name="isCheckedOut" />
       <p1:Variable x:TypeArguments="x:String" Name="result" />
       <p1:Variable x:TypeArguments="x:String" Default="[providerName]" Name="providerName" />
@@ -2685,7 +2685,7 @@
           <x:Reference>__ReferenceID178</x:Reference>
         </p1:FlowStep.Next>
       </p1:FlowStep>
-      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID208" Expression="[workflowDefinition.WorkflowType]" sap:VirtualizedContainerService.HintSize="70,87">
+      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID208" Expression="[workflowExecutionDefinition.WorkflowType]" sap:VirtualizedContainerService.HintSize="70,87">
         <p1:FlowSwitch.Default>
           <p1:FlowStep x:Name="__ReferenceID207">
             <sap:WorkflowViewStateService.ViewState>
@@ -3077,7 +3077,7 @@
         <x:Reference>__ReferenceID180<x:Key>StandardTwoStep</x:Key></x:Reference>
       </p1:FlowSwitch>
       <x:Reference>__ReferenceID207</x:Reference>
-      <p1:FlowDecision x:Name="__ReferenceID209" Condition="[Telerik.Sitefinity.Security.Claims.ClaimsManager.IsUnrestricted() And workflowDefinition.AllowAdministratorsToSkipWorkflow]" sap:VirtualizedContainerService.HintSize="70,87" True="{x:Reference __ReferenceID207}" False="{x:Reference __ReferenceID208}">
+            <p1:FlowDecision x:Name="__ReferenceID209" Condition="[workflowExecutionDefinition.CanUserSkip()]" sap:VirtualizedContainerService.HintSize="70,87" True="{x:Reference __ReferenceID207}" False="{x:Reference __ReferenceID208}">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">130,262.5</av:Point>

@@ -74,7 +74,7 @@
       <p1:Variable x:TypeArguments="s:Guid" Name="itemId" />
       <p1:Variable x:TypeArguments="x:String" Name="applicationName" />
       <p1:Variable x:TypeArguments="scg3:Dictionary(x:String, x:String)" Name="contextBag" />
-      <p1:Variable x:TypeArguments="tswm:WorkflowDefinition" Name="workflowDefinition" />
+      <p1:Variable x:TypeArguments="tsw:IWorkflowExecutionDefinition" Name="workflowExecutionDefinition" />
       <p1:Variable x:TypeArguments="x:Boolean" Name="isCheckedOut" />
       <p1:Variable x:TypeArguments="x:String" Name="result" />
       <p1:Variable x:TypeArguments="x:String" Name="providerName">
@@ -772,7 +772,7 @@
                             <av:PointCollection x:Key="ConnectorLocation">460,479.5 460,509.5 500,509.5 500,1069.5</av:PointCollection>
                           </scg3:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="UnPublishPageInMultilingualWarning" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
+                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="{x:Null}" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                         <p1:FlowStep.Next>
                           <p1:FlowStep x:Name="__ReferenceID46">
                             <sap:WorkflowViewStateService.ViewState>
@@ -2927,7 +2927,7 @@
           <x:Reference>__ReferenceID200</x:Reference>
         </p1:FlowStep.Next>
       </p1:FlowStep>
-      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID232" Expression="[workflowDefinition.WorkflowType]" sap:VirtualizedContainerService.HintSize="70,87">
+      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID232" Expression="[workflowExecutionDefinition.WorkflowType]" sap:VirtualizedContainerService.HintSize="70,87">
         <p1:FlowSwitch.Default>
           <p1:FlowStep x:Name="__ReferenceID231">
             <sap:WorkflowViewStateService.ViewState>
@@ -3328,7 +3328,7 @@
         <x:Reference>__ReferenceID202<x:Key>StandardTwoStep</x:Key></x:Reference>
       </p1:FlowSwitch>
       <x:Reference>__ReferenceID231</x:Reference>
-      <p1:FlowDecision x:Name="__ReferenceID233" Condition="[ClaimsManager.IsUnrestricted() And workflowDefinition.AllowAdministratorsToSkipWorkflow]" sap:VirtualizedContainerService.HintSize="70,87" True="{x:Reference __ReferenceID231}" False="{x:Reference __ReferenceID232}">
+            <p1:FlowDecision x:Name="__ReferenceID233" Condition="[workflowExecutionDefinition.CanUserSkip()]" sap:VirtualizedContainerService.HintSize="70,87" True="{x:Reference __ReferenceID231}" False="{x:Reference __ReferenceID232}">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">130,262.5</av:Point>
