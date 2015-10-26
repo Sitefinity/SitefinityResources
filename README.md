@@ -6,6 +6,7 @@ This repository contains an extract of Sitefinity's basic themes, workflows and 
 
 Also you can find the API Reference for Visual Studio's Help Viewer here:
 
+- [API Reference for Sitefinity 8.2](http://sitefinity.blob.core.windows.net/files/Sitefinity_Api_Reference_8.2.5900.0.zip)
 - [API Reference for Sitefinity 8.1](http://sitefinity.blob.core.windows.net/files/Sitefinity_Api_Reference_8.1.5800.0.zip)
 - [API Reference for Sitefinity 8.0](http://sitefinity.blob.core.windows.net/files/Sitefinity_API_Reference_8.0.5700.0.zip)
 - [API Reference for Sitefinity 7.3](http://sitefinity.blob.core.windows.net/files/Sitefinity_API_Reference_7.3.5600.0.zip)
