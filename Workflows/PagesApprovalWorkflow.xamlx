@@ -66,7 +66,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg3:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <p1:Sequence DisplayName="Content Approval Workflow Service" sad:XamlDebuggerXmlReader.FileName="C:\CMS\Sitefinity 4.0\OffcialBranches\Scrum5\Telerik.Sitefinity\Workflow\Workflows\PagesApprovalWorkflow.xamlx" sap:VirtualizedContainerService.HintSize="277,497" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+  <p1:Sequence DisplayName="Content Approval Workflow Service" sad:XamlDebuggerXmlReader.FileName="C:\CMS\Sitefinity 4.0\OfficialReleases\Release_8_2_Fixes\Telerik.Sitefinity\Workflow\Workflows\PagesApprovalWorkflow.xamlx" sap:VirtualizedContainerService.HintSize="277,497" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
     <p1:Sequence.Variables>
       <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
       <p1:Variable x:TypeArguments="x:String" Name="operationName" />
@@ -88,7 +88,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg3:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Receive x:Name="__ReferenceID234" CanCreateInstance="True" DisplayName="ReceiveRequest" sap:VirtualizedContainerService.HintSize="255,90" OperationName="SendMessage" ServiceContractName="p:IService">
+    <Receive x:Name="__ReferenceID237" CanCreateInstance="True" DisplayName="ReceiveRequest" sap:VirtualizedContainerService.HintSize="255,90" OperationName="SendMessage" ServiceContractName="p:IService">
       <Receive.CorrelationInitializers>
         <RequestReplyCorrelationInitializer CorrelationHandle="[handle]" />
       </Receive.CorrelationInitializers>
@@ -105,7 +105,7 @@
       </ReceiveParametersContent>
     </Receive>
     <tswa:InitializeWorkflowActivity sap:VirtualizedContainerService.HintSize="255,22" />
-    <p1:Flowchart DisplayName="ContentApproval" sap:VirtualizedContainerService.HintSize="255,51">
+    <p1:Flowchart DisplayName="ContentApproval" sap:VirtualizedContainerService.HintSize="2010,1468">
       <p1:Flowchart.Variables>
         <p1:Variable x:TypeArguments="tsfp:PageFacade" Default="[App.WorkWith().Page(itemId)]" Name="fluent" />
         <p1:Variable x:TypeArguments="x:String" Default="[CType(fluent.Get(), IApprovalWorkflowItem).ApprovalWorkflowState]" Name="itemStatus" />
@@ -124,9 +124,9 @@
         </scg3:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <p1:Flowchart.StartNode>
-        <x:Reference>__ReferenceID233</x:Reference>
+        <x:Reference>__ReferenceID236</x:Reference>
       </p1:Flowchart.StartNode>
-      <p1:FlowStep x:Name="__ReferenceID201">
+      <p1:FlowStep x:Name="__ReferenceID204">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">500,274.5</av:Point>
@@ -134,7 +134,7 @@
             <av:PointCollection x:Key="ConnectorLocation">700,300 730,300 730,220 925.5,220</av:PointCollection>
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <p1:Flowchart DisplayName="One Level Approval Workflow" sap:VirtualizedContainerService.HintSize="200,51">
+        <p1:Flowchart DisplayName="One Level Approval Workflow" sap:VirtualizedContainerService.HintSize="2010,1468">
           <p1:Flowchart.Variables>
             <p1:Variable x:TypeArguments="ts:IWorkflowItem" Default="[fluent.Get()]" Name="workflowItem" />
           </p1:Flowchart.Variables>
@@ -149,7 +149,7 @@
             </scg3:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <p1:Flowchart.StartNode>
-            <x:Reference>__ReferenceID92</x:Reference>
+            <x:Reference>__ReferenceID95</x:Reference>
           </p1:Flowchart.StartNode>
           <p1:FlowStep x:Name="__ReferenceID37">
             <sap:WorkflowViewStateService.ViewState>
@@ -654,7 +654,7 @@
               <x:Reference>__ReferenceID34</x:Reference>
             </p1:Flowchart>
           </p1:FlowStep>
-          <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID36}" x:Name="__ReferenceID92" Expression="[itemStatus]" sap:VirtualizedContainerService.HintSize="70,87">
+          <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID36}" x:Name="__ReferenceID95" Expression="[itemStatus]" sap:VirtualizedContainerService.HintSize="70,87">
             <sap:WorkflowViewStateService.ViewState>
               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">340,262.5</av:Point>
@@ -671,7 +671,7 @@
             <x:Reference>__ReferenceID36<x:Key>Draft</x:Key></x:Reference>
             <x:Reference>__ReferenceID36<x:Key>Rejected</x:Key></x:Reference>
             <x:Reference>__ReferenceID36<x:Key>Unpublished</x:Key></x:Reference>
-            <p1:FlowStep x:Key="AwaitingApproval" x:Name="__ReferenceID90">
+            <p1:FlowStep x:Key="AwaitingApproval" x:Name="__ReferenceID93">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">560,359</av:Point>
@@ -684,14 +684,14 @@
                 <x:Reference>__ReferenceID37</x:Reference>
               </p1:FlowStep.Next>
             </p1:FlowStep>
-            <p1:FlowStep x:Key="Published" x:Name="__ReferenceID89">
+            <p1:FlowStep x:Key="Published" x:Name="__ReferenceID92">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">780,514.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg3:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <p1:Flowchart DisplayName="Published workflow" sap:VirtualizedContainerService.HintSize="200,51">
+              <p1:Flowchart DisplayName="Published workflow" sap:VirtualizedContainerService.HintSize="2880,4470">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -703,25 +703,26 @@
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <p1:Flowchart.StartNode>
-                  <x:Reference>__ReferenceID56</x:Reference>
+                  <x:Reference>__ReferenceID59</x:Reference>
                 </p1:Flowchart.StartNode>
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID56" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID59" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">250,132.5</av:Point>
                       <av:Size x:Key="ShapeSize">70,87</av:Size>
                       <av:PointCollection x:Key="SaveAsAwaitingApprovalConnector">330,180 475.5,180 475.5,153 505.5,153</av:PointCollection>
-                      <av:PointCollection x:Key="UnpublishConnector">302.5,219.5 302.5,340 356.5,340</av:PointCollection>
-                      <av:PointCollection x:Key="DeleteConnector">320,176 350,176 350,140 448,140</av:PointCollection>
+                      <av:PointCollection x:Key="UnpublishConnector">302.5,219.5 302.5,330 388,330</av:PointCollection>
+                      <av:PointCollection x:Key="DeleteConnector">320,176 366,176 366,140 448,140</av:PointCollection>
                       <av:PointCollection x:Key="ScheduleConnector">310,151.25 1600,151.25 1600,177.5</av:PointCollection>
                       <av:PointCollection x:Key="PublishConnector">310,188.75 1020,188.75 1020,197.5</av:PointCollection>
                       <av:PointCollection x:Key="RejectConnector">285,217.5 285,963 815.5,963 815.5,843 845.5,843</av:PointCollection>
                       <av:PointCollection x:Key="SaveAsDraftConnector">267.5,219.5 267.5,360 230,360</av:PointCollection>
-                      <av:PointCollection x:Key="PreviewConnector">320,197.75 350,197.75 350,400 930,400</av:PointCollection>
+                      <av:PointCollection x:Key="PreviewConnector">320,197.75 342,197.75 342,400 930,400</av:PointCollection>
                       <av:PointCollection x:Key="ScheduledPublishConnector">295,132.5 295,121.25 1930,121.25 1930,329.5</av:PointCollection>
                       <av:PointCollection x:Key="StopScheduleConnector">265,132.5 265,87.04 2190,87.04 2190,107.5</av:PointCollection>
-                      <av:PointCollection x:Key="UpdateContentConnector">285,219.5 285,249.5 1280,249.5 1280,1039.5 1020,1039.5 1020,980 1050,980</av:PointCollection>
+                      <av:PointCollection x:Key="UpdateContentConnector">285,219.5 285,249.5 1280,249.5 1280,980 1250,980</av:PointCollection>
                       <av:PointCollection x:Key="Mobile previewConnector">320,154.25 350,154.25 350,500 930,500</av:PointCollection>
+                      <av:PointCollection x:Key="SendForApprovalConnector">250,176 240,176 240,1122.5 200,1122.5 200,1440.5</av:PointCollection>
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID47">
@@ -757,9 +758,9 @@
                   <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID50">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">356.5,287.5</av:Point>
+                        <av:Point x:Key="ShapeLocation">388,277.5</av:Point>
                         <av:Size x:Key="ShapeSize">264,105</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">488.5,392.5 460,392.5 460,420.5</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">520,382.5 520,520.5</av:PointCollection>
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
@@ -767,17 +768,17 @@
                       <p1:FlowStep x:Name="__ReferenceID39">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">360,420.5</av:Point>
+                            <av:Point x:Key="ShapeLocation">420,520.5</av:Point>
                             <av:Size x:Key="ShapeSize">200,59</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">460,479.5 460,509.5 500,509.5 500,1069.5</av:PointCollection>
+                            <av:PointCollection x:Key="ConnectorLocation">520,579.5 520,609.5 590,609.5 590,649.5</av:PointCollection>
                           </scg3:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="{x:Null}" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
+                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                         <p1:FlowStep.Next>
                           <p1:FlowStep x:Name="__ReferenceID46">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">292,1069.5</av:Point>
+                                <av:Point x:Key="ShapeLocation">381,649.5</av:Point>
                                 <av:Size x:Key="ShapeSize">418,161</av:Size>
                               </scg3:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -792,7 +793,7 @@
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">448,87.5</av:Point>
                         <av:Size x:Key="ShapeSize">264,105</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">580,192.5 580,222.5 742,222.5 742,20.5 890,20.5 890,50.5</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">712,140 742,140 742,80 790,80</av:PointCollection>
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
@@ -826,27 +827,6 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID53">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">1050,950.5</av:Point>
-                        <av:Size x:Key="ShapeSize">200,59</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">1150,1009.5 1150,1039.5 770,1039.5 770,1249.5</av:PointCollection>
-                      </scg3:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <tswa:DecisionActivity AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" ActionName="UpdateContent" ArgumentDialogName="" AvailableOnlyIfState="" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
-                    <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID52">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">288,1249.5</av:Point>
-                            <av:Size x:Key="ShapeSize">966,161</av:Size>
-                          </scg3:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().PullUpdatedContent(New Guid(contextBag.Item(&quot;ContentItemId&quot;)), contextBag.Item(&quot;ContentItemProviderName&quot;)).CheckIn().SaveChanges()]" DisplayName="Create a new draft with updated content blocks" sap:VirtualizedContainerService.HintSize="966,161" />
-                      </p1:FlowStep>
-                    </p1:FlowStep.Next>
-                  </p1:FlowStep>
                   <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID54">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -856,6 +836,60 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                   </p1:FlowStep>
+                  <p1:FlowStep x:Key="SendForApproval" x:Name="__ReferenceID56">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">100,1440.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,59</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">300,1470 330,1470 330,1450 393.5,1450</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingApproval" RunAsUICommand="False" Title="SendForApprovalAction" />
+                    <p1:FlowStep.Next>
+                      <p1:FlowStep x:Name="__ReferenceID58">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">393.5,1369.5</av:Point>
+                            <av:Size x:Key="ShapeSize">353,161</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">746.5,1450 924,1450</av:PointCollection>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().CheckIn().SaveChanges()]" sap:VirtualizedContainerService.HintSize="353,161" />
+                        <p1:FlowStep.Next>
+                          <p1:FlowStep x:Name="__ReferenceID57">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">924,1363.5</av:Point>
+                                <av:Size x:Key="ShapeSize">292,173</av:Size>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <tswa:NotifyGroup EmailText="You have new items waiting approval." Group="Approve" sap:VirtualizedContainerService.HintSize="292,173" />
+                          </p1:FlowStep>
+                        </p1:FlowStep.Next>
+                      </p1:FlowStep>
+                    </p1:FlowStep.Next>
+                  </p1:FlowStep>
+                  <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID53">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">1050,950.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,59</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">1150,1009.5 1150,1039.5 800,1039.5 800,1109.5</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <tswa:DecisionActivity AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" ActionName="UpdateContent" ArgumentDialogName="" AvailableOnlyIfState="" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
+                    <p1:FlowStep.Next>
+                      <p1:FlowStep x:Name="__ReferenceID52">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">317,1109.5</av:Point>
+                            <av:Size x:Key="ShapeSize">966,161</av:Size>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().PullUpdatedContent(New Guid(contextBag.Item(&quot;ContentItemId&quot;)), contextBag.Item(&quot;ContentItemProviderName&quot;)).CheckIn().SaveChanges()]" DisplayName="Create a new draft with updated content blocks" sap:VirtualizedContainerService.HintSize="966,161" />
+                      </p1:FlowStep>
+                    </p1:FlowStep.Next>
+                  </p1:FlowStep>
                 </p1:FlowSwitch>
                 <x:Reference>__ReferenceID38</x:Reference>
                 <x:Reference>__ReferenceID39</x:Reference>
@@ -863,10 +897,10 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">50,3016</av:Point>
-                      <av:Size x:Key="ShapeSize">1966,1418</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p1:Flowchart DisplayName="Published workflow" sap:VirtualizedContainerService.HintSize="1966,1418">
+                  <p1:Flowchart DisplayName="Published workflow" sap:VirtualizedContainerService.HintSize="200,51">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -874,22 +908,22 @@
                         <av:Size x:Key="ShapeSize">60,75</av:Size>
                         <x:Double x:Key="Width">1952</x:Double>
                         <x:Double x:Key="Height">1382</x:Double>
-                        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 300,142.5</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 305,107.5 305,142.5</av:PointCollection>
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <p1:Flowchart.StartNode>
                       <x:Reference>__ReferenceID45</x:Reference>
                     </p1:Flowchart.StartNode>
-                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID45" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
+                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID45" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
-                          <av:Size x:Key="ShapeSize">60,75</av:Size>
+                          <av:Size x:Key="ShapeSize">70,87</av:Size>
                           <av:PointCollection x:Key="SaveAsAwaitingApprovalConnector">330,180 475.5,180 475.5,153 505.5,153</av:PointCollection>
-                          <av:PointCollection x:Key="UnpublishConnector">300,217.5 300,1090 453.5,1090</av:PointCollection>
-                          <av:PointCollection x:Key="DeleteConnector">315,217.5 315,856.5 580,856.5 580,826.5</av:PointCollection>
-                          <av:PointCollection x:Key="ScheduleConnector">330,161.25 360,161.25 360,13.5 610,13.5 610,43.5</av:PointCollection>
-                          <av:PointCollection x:Key="PublishConnector">330,198.75 360,198.75 360,410 463.5,410</av:PointCollection>
+                          <av:PointCollection x:Key="UnpublishConnector">287.5,229.5 287.5,953.5 553.5,953.5 553.5,983.5</av:PointCollection>
+                          <av:PointCollection x:Key="DeleteConnector">305,229.5 305,643 453.5,643</av:PointCollection>
+                          <av:PointCollection x:Key="ScheduleConnector">340,164.25 370,164.25 370,73 483.5,73</av:PointCollection>
+                          <av:PointCollection x:Key="PublishConnector">322.5,229.5 322.5,333 463.5,333</av:PointCollection>
                           <av:PointCollection x:Key="RejectConnector">285,217.5 285,963 815.5,963 815.5,843 845.5,843</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -897,20 +931,20 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">483.5,43.5</av:Point>
-                            <av:Size x:Key="ShapeSize">253,213</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">736.5,150 766.5,150 766.5,140 775.5,140</av:PointCollection>
+                            <av:Size x:Key="ShapeSize">200,59</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">683.5,73 713.5,73 713.5,140 775.5,140</av:PointCollection>
                           </scg3:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
+                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
                           <p1:FlowStep x:Name="__ReferenceID44">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">775.5,59.5</av:Point>
-                                <av:Size x:Key="ShapeSize">269,161</av:Size>
+                                <av:Size x:Key="ShapeSize">271,161</av:Size>
                               </scg3:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <tswa:ExecuteCodeActivity CodeExecutionResult="{x:Null}" sap:VirtualizedContainerService.HintSize="269,161" />
+                            <tswa:ExecuteCodeActivity CodeExecutionResult="{x:Null}" sap:VirtualizedContainerService.HintSize="271,161" />
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
@@ -918,28 +952,28 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">463.5,303.5</av:Point>
-                            <av:Size x:Key="ShapeSize">253,213</av:Size>
+                            <av:Size x:Key="ShapeSize">200,59</av:Size>
                           </scg3:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" Title="PublishAction" />
+                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" Title="PublishAction" />
                       </p1:FlowStep>
                       <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID42">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,613.5</av:Point>
-                            <av:Size x:Key="ShapeSize">253,213</av:Size>
+                            <av:Size x:Key="ShapeSize">200,59</av:Size>
                           </scg3:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="DeleteAction" />
+                        <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="DeleteAction" />
                       </p1:FlowStep>
                       <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID43">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,983.5</av:Point>
-                            <av:Size x:Key="ShapeSize">253,213</av:Size>
+                            <av:Size x:Key="ShapeSize">200,59</av:Size>
                           </scg3:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Unpublished" RunAsUICommand="False" Title="UnpublishAction" />
+                        <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Unpublished" RunAsUICommand="False" Title="UnpublishAction" />
                       </p1:FlowStep>
                     </p1:FlowSwitch>
                     <x:Reference>__ReferenceID40</x:Reference>
@@ -951,10 +985,10 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">765.5,299.5</av:Point>
-                          <av:Size x:Key="ShapeSize">269,161</av:Size>
+                          <av:Size x:Key="ShapeSize">271,161</av:Size>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <tswa:ExecuteCodeActivity CodeExecutionResult="{x:Null}" sap:VirtualizedContainerService.HintSize="269,161" />
+                      <tswa:ExecuteCodeActivity CodeExecutionResult="{x:Null}" sap:VirtualizedContainerService.HintSize="271,161" />
                     </p1:FlowStep>
                   </p1:Flowchart>
                 </p1:FlowStep>
@@ -968,9 +1002,12 @@
                 <x:Reference>__ReferenceID53</x:Reference>
                 <x:Reference>__ReferenceID54</x:Reference>
                 <x:Reference>__ReferenceID55</x:Reference>
+                <x:Reference>__ReferenceID56</x:Reference>
+                <x:Reference>__ReferenceID57</x:Reference>
+                <x:Reference>__ReferenceID58</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
-            <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID91">
+            <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID94">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">990,504.5</av:Point>
@@ -989,9 +1026,9 @@
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <p1:Flowchart.StartNode>
-                  <x:Reference>__ReferenceID88</x:Reference>
+                  <x:Reference>__ReferenceID91</x:Reference>
                 </p1:Flowchart.StartNode>
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID88" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID91" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">250,132.5</av:Point>
@@ -1010,7 +1047,7 @@
                       <av:PointCollection x:Key="Mobile previewConnector">250,197.75 220,197.75 220,249.5 260,249.5 260,494.54 1220.14918190568,494.54</av:PointCollection>
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID68">
+                  <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID71">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">30,330.5</av:Point>
@@ -1020,7 +1057,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" DisplayName="SaveAsDraft" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="1" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID69">
+                      <p1:FlowStep x:Name="__ReferenceID72">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">9,889.5</av:Point>
@@ -1031,7 +1068,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID70">
+                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID73">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1220,330.5</av:Point>
@@ -1040,7 +1077,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="Exclusive" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID76">
+                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID79">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1823,329.5</av:Point>
@@ -1050,7 +1087,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap:VirtualizedContainerService.HintSize="214,61" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID75">
+                      <p1:FlowStep x:Name="__ReferenceID78">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1756.5,519.5</av:Point>
@@ -1062,7 +1099,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID79">
+                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID82">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">296.5,287.5</av:Point>
@@ -1072,7 +1109,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID59">
+                      <p1:FlowStep x:Name="__ReferenceID62">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">320,420.5</av:Point>
@@ -1082,7 +1119,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID67">
+                          <p1:FlowStep x:Name="__ReferenceID70">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">292,1069.5</av:Point>
@@ -1095,7 +1132,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID80">
+                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID83">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">896.5,197.5</av:Point>
@@ -1105,7 +1142,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID57">
+                      <p1:FlowStep x:Name="__ReferenceID60">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">920,330.5</av:Point>
@@ -1115,7 +1152,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Publish" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID60">
+                          <p1:FlowStep x:Name="__ReferenceID63">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">956.5,879.5</av:Point>
@@ -1128,7 +1165,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID81">
+                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID84">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1476.5,177.5</av:Point>
@@ -1138,7 +1175,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID74">
+                      <p1:FlowStep x:Name="__ReferenceID77">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1518,330</av:Point>
@@ -1148,7 +1185,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Schedule" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID73">
+                          <p1:FlowStep x:Name="__ReferenceID76">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">1443,799.5</av:Point>
@@ -1158,7 +1195,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().CheckIn().SaveChanges()]" sap:VirtualizedContainerService.HintSize="353,161" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID72">
+                              <p1:FlowStep x:Name="__ReferenceID75">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">1445,1001.5</av:Point>
@@ -1168,7 +1205,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.AsStandardPage().Get().Page.PublicationDate]" sap:VirtualizedContainerService.HintSize="299,197" OperationName="ScheduledPublish" />
                                 <p1:FlowStep.Next>
-                                  <p1:FlowStep x:Name="__ReferenceID71">
+                                  <p1:FlowStep x:Name="__ReferenceID74">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">1459,1311.5</av:Point>
@@ -1185,7 +1222,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID82">
+                  <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID85">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">2066.5,107.5</av:Point>
@@ -1195,7 +1232,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID78">
+                      <p1:FlowStep x:Name="__ReferenceID81">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">2080,260.5</av:Point>
@@ -1205,7 +1242,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" CssClass="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Scheduled" ClosesForm="False" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="AwaitingApproval" RunAsUICommand="False" Title="StopScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID77">
+                          <p1:FlowStep x:Name="__ReferenceID80">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">2100,799.5</av:Point>
@@ -1219,7 +1256,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID83">
+                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID86">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">666.5,377.5</av:Point>
@@ -1229,7 +1266,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID58">
+                      <p1:FlowStep x:Name="__ReferenceID61">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">700,520.5</av:Point>
@@ -1239,7 +1276,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID87">
+                          <p1:FlowStep x:Name="__ReferenceID90">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">700,620</av:Point>
@@ -1258,7 +1295,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID85">
+                  <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID88">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1930,970.5</av:Point>
@@ -1268,7 +1305,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" ActionName="UpdateContent" ArgumentDialogName="" AvailableOnlyIfState="" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID84">
+                      <p1:FlowStep x:Name="__ReferenceID87">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1894.5,1549.5</av:Point>
@@ -1279,7 +1316,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID86">
+                  <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID89">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1220.14918190568,465.04</av:Point>
@@ -1289,10 +1326,10 @@
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                   </p1:FlowStep>
                 </p1:FlowSwitch>
-                <x:Reference>__ReferenceID57</x:Reference>
-                <x:Reference>__ReferenceID58</x:Reference>
-                <x:Reference>__ReferenceID59</x:Reference>
                 <x:Reference>__ReferenceID60</x:Reference>
+                <x:Reference>__ReferenceID61</x:Reference>
+                <x:Reference>__ReferenceID62</x:Reference>
+                <x:Reference>__ReferenceID63</x:Reference>
                 <p1:FlowStep>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1312,9 +1349,9 @@
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <p1:Flowchart.StartNode>
-                      <x:Reference>__ReferenceID66</x:Reference>
+                      <x:Reference>__ReferenceID69</x:Reference>
                     </p1:Flowchart.StartNode>
-                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID66" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
+                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID69" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -1327,7 +1364,7 @@
                           <av:PointCollection x:Key="RejectConnector">285,217.5 285,963 815.5,963 815.5,843 845.5,843</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID61">
+                      <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID64">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">483.5,43.5</av:Point>
@@ -1337,7 +1374,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID65">
+                          <p1:FlowStep x:Name="__ReferenceID68">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">775.5,59.5</av:Point>
@@ -1348,7 +1385,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID62">
+                      <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID65">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">463.5,303.5</av:Point>
@@ -1357,7 +1394,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" Title="PublishAction" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID63">
+                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID66">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,613.5</av:Point>
@@ -1366,7 +1403,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="DeleteAction" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID64">
+                      <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID67">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,983.5</av:Point>
@@ -1376,11 +1413,11 @@
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Unpublished" RunAsUICommand="False" Title="UnpublishAction" />
                       </p1:FlowStep>
                     </p1:FlowSwitch>
-                    <x:Reference>__ReferenceID61</x:Reference>
-                    <x:Reference>__ReferenceID62</x:Reference>
-                    <x:Reference>__ReferenceID63</x:Reference>
                     <x:Reference>__ReferenceID64</x:Reference>
                     <x:Reference>__ReferenceID65</x:Reference>
+                    <x:Reference>__ReferenceID66</x:Reference>
+                    <x:Reference>__ReferenceID67</x:Reference>
+                    <x:Reference>__ReferenceID68</x:Reference>
                     <p1:FlowStep>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1392,9 +1429,6 @@
                     </p1:FlowStep>
                   </p1:Flowchart>
                 </p1:FlowStep>
-                <x:Reference>__ReferenceID67</x:Reference>
-                <x:Reference>__ReferenceID68</x:Reference>
-                <x:Reference>__ReferenceID69</x:Reference>
                 <x:Reference>__ReferenceID70</x:Reference>
                 <x:Reference>__ReferenceID71</x:Reference>
                 <x:Reference>__ReferenceID72</x:Reference>
@@ -1413,15 +1447,18 @@
                 <x:Reference>__ReferenceID85</x:Reference>
                 <x:Reference>__ReferenceID86</x:Reference>
                 <x:Reference>__ReferenceID87</x:Reference>
+                <x:Reference>__ReferenceID88</x:Reference>
+                <x:Reference>__ReferenceID89</x:Reference>
+                <x:Reference>__ReferenceID90</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
           </p1:FlowSwitch>
-          <x:Reference>__ReferenceID89</x:Reference>
-          <x:Reference>__ReferenceID90</x:Reference>
-          <x:Reference>__ReferenceID91</x:Reference>
+          <x:Reference>__ReferenceID92</x:Reference>
+          <x:Reference>__ReferenceID93</x:Reference>
+          <x:Reference>__ReferenceID94</x:Reference>
         </p1:Flowchart>
         <p1:FlowStep.Next>
-          <p1:FlowStep x:Name="__ReferenceID200">
+          <p1:FlowStep x:Name="__ReferenceID203">
             <sap:WorkflowViewStateService.ViewState>
               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">925.5,148</av:Point>
@@ -1432,7 +1469,7 @@
           </p1:FlowStep>
         </p1:FlowStep.Next>
       </p1:FlowStep>
-      <p1:FlowStep x:Name="__ReferenceID202">
+      <p1:FlowStep x:Name="__ReferenceID205">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">500,384.5</av:Point>
@@ -1455,9 +1492,9 @@
             </scg3:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <p1:Flowchart.StartNode>
-            <x:Reference>__ReferenceID199</x:Reference>
+            <x:Reference>__ReferenceID202</x:Reference>
           </p1:Flowchart.StartNode>
-          <p1:FlowStep x:Name="__ReferenceID164">
+          <p1:FlowStep x:Name="__ReferenceID167">
             <sap:WorkflowViewStateService.ViewState>
               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">900,574.5</av:Point>
@@ -1476,9 +1513,9 @@
                 </scg3:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <p1:Flowchart.StartNode>
-                <x:Reference>__ReferenceID110</x:Reference>
+                <x:Reference>__ReferenceID113</x:Reference>
               </p1:Flowchart.StartNode>
-              <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID110" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+              <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID113" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -1494,7 +1531,7 @@
                     <av:PointCollection x:Key="Mobile previewConnector">270,207.75 240,207.75 240,520 480,520</av:PointCollection>
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID96">
+                <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID99">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">0,300.5</av:Point>
@@ -1504,7 +1541,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowRejectDialog" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Reject" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="RejectedForPublishing" RunAsUICommand="False" Title="RejectAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID99">
+                    <p1:FlowStep x:Name="__ReferenceID102">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">6.5,819.5</av:Point>
@@ -1514,7 +1551,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().Undo().SaveChanges()]" sap:VirtualizedContainerService.HintSize="339,161" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID100">
+                        <p1:FlowStep x:Name="__ReferenceID103">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">74,1083.5</av:Point>
@@ -1527,7 +1564,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID95">
+                <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID98">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">290,300.5</av:Point>
@@ -1537,7 +1574,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID109">
+                    <p1:FlowStep x:Name="__ReferenceID112">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">290,620</av:Point>
@@ -1554,7 +1591,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID94">
+                <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID97">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">580,300.5</av:Point>
@@ -1564,7 +1601,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Publish" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID98">
+                    <p1:FlowStep x:Name="__ReferenceID101">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">596.5,819.5</av:Point>
@@ -1576,7 +1613,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID101">
+                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID104">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1480,300.5</av:Point>
@@ -1585,7 +1622,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" RestrictionType="None" RunAsUICommand="False" Title="Preview" />
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID105">
+                <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID108">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1180,300.5</av:Point>
@@ -1595,7 +1632,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Schedule" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID104">
+                    <p1:FlowStep x:Name="__ReferenceID107">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1210,799.5</av:Point>
@@ -1605,7 +1642,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().CheckIn().SaveChanges()]" sap:VirtualizedContainerService.HintSize="351,161" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID103">
+                        <p1:FlowStep x:Name="__ReferenceID106">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1271.5,1011.5</av:Point>
@@ -1615,7 +1652,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.AsStandardPage().Get().Page.PublicationDate]" sap:VirtualizedContainerService.HintSize="297,197" OperationName="ScheduledPublish" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID102">
+                            <p1:FlowStep x:Name="__ReferenceID105">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">1235.5,1301.5</av:Point>
@@ -1630,7 +1667,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="SaveAsAwaitingPublishing" x:Name="__ReferenceID93">
+                <p1:FlowStep x:Key="SaveAsAwaitingPublishing" x:Name="__ReferenceID96">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">880,300.5</av:Point>
@@ -1640,7 +1677,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="SaveAsAwaiting" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingPublishing" RunAsUICommand="False" Title="AwaitingPublishingAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID97">
+                    <p1:FlowStep x:Name="__ReferenceID100">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">876.5,1019.5</av:Point>
@@ -1652,7 +1689,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID106">
+                <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID109">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1540,410.5</av:Point>
@@ -1662,7 +1699,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" ActionName="UpdateContent" ArgumentDialogName="" AvailableOnlyIfState="" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID107">
+                    <p1:FlowStep x:Name="__ReferenceID110">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1064.5,1049.5</av:Point>
@@ -1673,7 +1710,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID108">
+                <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID111">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">480,490.5</av:Point>
@@ -1683,9 +1720,6 @@
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                 </p1:FlowStep>
               </p1:FlowSwitch>
-              <x:Reference>__ReferenceID93</x:Reference>
-              <x:Reference>__ReferenceID94</x:Reference>
-              <x:Reference>__ReferenceID95</x:Reference>
               <x:Reference>__ReferenceID96</x:Reference>
               <x:Reference>__ReferenceID97</x:Reference>
               <x:Reference>__ReferenceID98</x:Reference>
@@ -1700,9 +1734,12 @@
               <x:Reference>__ReferenceID107</x:Reference>
               <x:Reference>__ReferenceID108</x:Reference>
               <x:Reference>__ReferenceID109</x:Reference>
+              <x:Reference>__ReferenceID110</x:Reference>
+              <x:Reference>__ReferenceID111</x:Reference>
+              <x:Reference>__ReferenceID112</x:Reference>
             </p1:Flowchart>
           </p1:FlowStep>
-          <p1:FlowStep x:Name="__ReferenceID130">
+          <p1:FlowStep x:Name="__ReferenceID133">
             <sap:WorkflowViewStateService.ViewState>
               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">20,494.5</av:Point>
@@ -1725,11 +1762,11 @@
                 </scg3:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <p1:Flowchart.StartNode>
-                <x:Reference>__ReferenceID129</x:Reference>
+                <x:Reference>__ReferenceID132</x:Reference>
               </p1:Flowchart.StartNode>
-              <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID129" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+              <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID132" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                 <p1:FlowSwitch.Default>
-                  <p1:FlowStep x:Name="__ReferenceID118">
+                  <p1:FlowStep x:Name="__ReferenceID121">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">0,139</av:Point>
@@ -1755,7 +1792,7 @@
                     <av:PointCollection x:Key="Mobile previewConnector">287.5,209.5 287.5,239.5 70,239.5 70,720.5 100,720.5 100,750.5</av:PointCollection>
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <p1:FlowStep x:Key="SendForApproval" x:Name="__ReferenceID113">
+                <p1:FlowStep x:Key="SendForApproval" x:Name="__ReferenceID116">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">430,450.5</av:Point>
@@ -1765,7 +1802,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingApproval" RunAsUICommand="False" Title="SendForApprovalAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID114">
+                    <p1:FlowStep x:Name="__ReferenceID117">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">754.5,459.5</av:Point>
@@ -1775,7 +1812,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().CheckIn().SaveChanges()]" sap:VirtualizedContainerService.HintSize="353,161" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID116">
+                        <p1:FlowStep x:Name="__ReferenceID119">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1224,513.5</av:Point>
@@ -1788,7 +1825,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID117">
+                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID120">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">100,640.5</av:Point>
@@ -1797,7 +1834,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="Exclusive" RunAsUICommand="True" Title="Preview" />
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID112">
+                <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID115">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">469,7.50000000000001</av:Point>
@@ -1807,7 +1844,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID115">
+                    <p1:FlowStep x:Name="__ReferenceID118">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">844.5,9.50000000000001</av:Point>
@@ -1818,7 +1855,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID121" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID124" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">570,262.5</av:Point>
@@ -1829,7 +1866,7 @@
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <p1:FlowDecision.True>
-                    <p1:FlowStep x:Name="__ReferenceID120">
+                    <p1:FlowStep x:Name="__ReferenceID123">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">850,290.5</av:Point>
@@ -1839,7 +1876,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Draft" AvailableOnlyIfStateNot="" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" Title="DiscardDraftAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID119">
+                        <p1:FlowStep x:Name="__ReferenceID122">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1098.5,249.5</av:Point>
@@ -1853,7 +1890,7 @@
                     </p1:FlowStep>
                   </p1:FlowDecision.True>
                   <p1:FlowDecision.False>
-                    <p1:FlowStep x:Name="__ReferenceID122">
+                    <p1:FlowStep x:Name="__ReferenceID125">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">720,189</av:Point>
@@ -1864,7 +1901,7 @@
                     </p1:FlowStep>
                   </p1:FlowDecision.False>
                 </p1:FlowDecision>
-                <p1:FlowDecision x:Key="Delete" x:Name="__ReferenceID124" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowDecision x:Key="Delete" x:Name="__ReferenceID127" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">380,572.5</av:Point>
@@ -1875,7 +1912,7 @@
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <p1:FlowDecision.True>
-                    <p1:FlowStep x:Name="__ReferenceID123">
+                    <p1:FlowStep x:Name="__ReferenceID126">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">206.5,817.5</av:Point>
@@ -1885,7 +1922,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID111">
+                        <p1:FlowStep x:Name="__ReferenceID114">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">560,680.5</av:Point>
@@ -1895,7 +1932,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfState="Draft" ClosesForm="True" CodeExecutionResult="False" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="2" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID128">
+                            <p1:FlowStep x:Name="__ReferenceID131">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">560,780</av:Point>
@@ -1916,10 +1953,10 @@
                     </p1:FlowStep>
                   </p1:FlowDecision.True>
                   <p1:FlowDecision.False>
-                    <x:Reference>__ReferenceID111</x:Reference>
+                    <x:Reference>__ReferenceID114</x:Reference>
                   </p1:FlowDecision.False>
                 </p1:FlowDecision>
-                <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID126">
+                <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID129">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1540,410.5</av:Point>
@@ -1929,7 +1966,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" ActionName="UpdateContent" ArgumentDialogName="" AvailableOnlyIfState="" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID125">
+                    <p1:FlowStep x:Name="__ReferenceID128">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1064.5,1049.5</av:Point>
@@ -1940,7 +1977,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID127">
+                <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID130">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">0,750.5</av:Point>
@@ -1950,16 +1987,13 @@
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                 </p1:FlowStep>
               </p1:FlowSwitch>
-              <x:Reference>__ReferenceID112</x:Reference>
-              <x:Reference>__ReferenceID113</x:Reference>
-              <x:Reference>__ReferenceID114</x:Reference>
               <x:Reference>__ReferenceID115</x:Reference>
               <x:Reference>__ReferenceID116</x:Reference>
               <x:Reference>__ReferenceID117</x:Reference>
-              <x:Reference>__ReferenceID111</x:Reference>
               <x:Reference>__ReferenceID118</x:Reference>
               <x:Reference>__ReferenceID119</x:Reference>
               <x:Reference>__ReferenceID120</x:Reference>
+              <x:Reference>__ReferenceID114</x:Reference>
               <x:Reference>__ReferenceID121</x:Reference>
               <x:Reference>__ReferenceID122</x:Reference>
               <x:Reference>__ReferenceID123</x:Reference>
@@ -1968,9 +2002,12 @@
               <x:Reference>__ReferenceID126</x:Reference>
               <x:Reference>__ReferenceID127</x:Reference>
               <x:Reference>__ReferenceID128</x:Reference>
+              <x:Reference>__ReferenceID129</x:Reference>
+              <x:Reference>__ReferenceID130</x:Reference>
+              <x:Reference>__ReferenceID131</x:Reference>
             </p1:Flowchart>
           </p1:FlowStep>
-          <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID130}" x:Name="__ReferenceID199" Expression="[itemStatus]" sap:VirtualizedContainerService.HintSize="70,87">
+          <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID133}" x:Name="__ReferenceID202" Expression="[itemStatus]" sap:VirtualizedContainerService.HintSize="70,87">
             <sap:WorkflowViewStateService.ViewState>
               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">340,262.5</av:Point>
@@ -1986,10 +2023,10 @@
                 <av:PointCollection x:Key="ScheduledConnector">375,262.5 375,80 510,80</av:PointCollection>
               </scg3:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <x:Reference>__ReferenceID130<x:Key>Draft</x:Key></x:Reference>
-            <x:Reference>__ReferenceID130<x:Key>Rejected</x:Key></x:Reference>
-            <x:Reference>__ReferenceID130<x:Key>Unpublished</x:Key></x:Reference>
-            <p1:FlowStep x:Key="Published" x:Name="__ReferenceID195">
+            <x:Reference>__ReferenceID133<x:Key>Draft</x:Key></x:Reference>
+            <x:Reference>__ReferenceID133<x:Key>Rejected</x:Key></x:Reference>
+            <x:Reference>__ReferenceID133<x:Key>Unpublished</x:Key></x:Reference>
+            <p1:FlowStep x:Key="Published" x:Name="__ReferenceID198">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">510,124.5</av:Point>
@@ -2008,9 +2045,9 @@
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <p1:Flowchart.StartNode>
-                  <x:Reference>__ReferenceID147</x:Reference>
+                  <x:Reference>__ReferenceID150</x:Reference>
                 </p1:Flowchart.StartNode>
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID147" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID150" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -2028,7 +2065,7 @@
                       <av:PointCollection x:Key="Mobile previewConnector">340,164.25 370,164.25 370,60.54 799,60.54</av:PointCollection>
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID140">
+                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID143">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">570,270.5</av:Point>
@@ -2037,7 +2074,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="Exclusive" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID141">
+                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID144">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">6.5,267.5</av:Point>
@@ -2047,7 +2084,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID132">
+                      <p1:FlowStep x:Name="__ReferenceID135">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">20,420.5</av:Point>
@@ -2057,7 +2094,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="False" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="6" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID139">
+                          <p1:FlowStep x:Name="__ReferenceID142">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">2,949.5</av:Point>
@@ -2070,7 +2107,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID142">
+                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID145">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">346.5,387.5</av:Point>
@@ -2080,7 +2117,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID131">
+                      <p1:FlowStep x:Name="__ReferenceID134">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">400,570.5</av:Point>
@@ -2090,7 +2127,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID146">
+                          <p1:FlowStep x:Name="__ReferenceID149">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">400,720</av:Point>
@@ -2109,7 +2146,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID144">
+                  <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID147">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">790,260.5</av:Point>
@@ -2119,7 +2156,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID143">
+                      <p1:FlowStep x:Name="__ReferenceID146">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">761,539.5</av:Point>
@@ -2130,7 +2167,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID145">
+                  <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID148">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">799,31.04</av:Point>
@@ -2140,8 +2177,8 @@
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                   </p1:FlowStep>
                 </p1:FlowSwitch>
-                <x:Reference>__ReferenceID131</x:Reference>
-                <x:Reference>__ReferenceID132</x:Reference>
+                <x:Reference>__ReferenceID134</x:Reference>
+                <x:Reference>__ReferenceID135</x:Reference>
                 <p1:FlowStep>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2161,9 +2198,9 @@
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <p1:Flowchart.StartNode>
-                      <x:Reference>__ReferenceID138</x:Reference>
+                      <x:Reference>__ReferenceID141</x:Reference>
                     </p1:Flowchart.StartNode>
-                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID138" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
+                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID141" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -2176,7 +2213,7 @@
                           <av:PointCollection x:Key="RejectConnector">285,217.5 285,963 815.5,963 815.5,843 845.5,843</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID133">
+                      <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID136">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">483.5,43.5</av:Point>
@@ -2186,7 +2223,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Schedule" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID137">
+                          <p1:FlowStep x:Name="__ReferenceID140">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">775.5,59.5</av:Point>
@@ -2197,7 +2234,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID134">
+                      <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID137">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">463.5,303.5</av:Point>
@@ -2206,7 +2243,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" Title="PublishAction" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID135">
+                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID138">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,613.5</av:Point>
@@ -2215,7 +2252,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="DeleteAction" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID136">
+                      <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID139">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,983.5</av:Point>
@@ -2225,11 +2262,11 @@
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Unpublished" RunAsUICommand="False" Title="UnpublishAction" />
                       </p1:FlowStep>
                     </p1:FlowSwitch>
-                    <x:Reference>__ReferenceID133</x:Reference>
-                    <x:Reference>__ReferenceID134</x:Reference>
-                    <x:Reference>__ReferenceID135</x:Reference>
                     <x:Reference>__ReferenceID136</x:Reference>
                     <x:Reference>__ReferenceID137</x:Reference>
+                    <x:Reference>__ReferenceID138</x:Reference>
+                    <x:Reference>__ReferenceID139</x:Reference>
+                    <x:Reference>__ReferenceID140</x:Reference>
                     <p1:FlowStep>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2241,17 +2278,17 @@
                     </p1:FlowStep>
                   </p1:Flowchart>
                 </p1:FlowStep>
-                <x:Reference>__ReferenceID139</x:Reference>
-                <x:Reference>__ReferenceID140</x:Reference>
-                <x:Reference>__ReferenceID141</x:Reference>
                 <x:Reference>__ReferenceID142</x:Reference>
                 <x:Reference>__ReferenceID143</x:Reference>
                 <x:Reference>__ReferenceID144</x:Reference>
                 <x:Reference>__ReferenceID145</x:Reference>
                 <x:Reference>__ReferenceID146</x:Reference>
+                <x:Reference>__ReferenceID147</x:Reference>
+                <x:Reference>__ReferenceID148</x:Reference>
+                <x:Reference>__ReferenceID149</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
-            <p1:FlowStep x:Key="RejectedForPublishing" x:Name="__ReferenceID163">
+            <p1:FlowStep x:Key="RejectedForPublishing" x:Name="__ReferenceID166">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">566.5,427.5</av:Point>
@@ -2261,7 +2298,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Approve" />
               <p1:FlowStep.Next>
-                <p1:FlowStep x:Name="__ReferenceID196">
+                <p1:FlowStep x:Name="__ReferenceID199">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">590,584.5</av:Point>
@@ -2280,9 +2317,9 @@
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <p1:Flowchart.StartNode>
-                      <x:Reference>__ReferenceID162</x:Reference>
+                      <x:Reference>__ReferenceID165</x:Reference>
                     </p1:Flowchart.StartNode>
-                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID162" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID165" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -2298,7 +2335,7 @@
                           <av:PointCollection x:Key="Mobile previewConnector">270,186 130,186 130,280.5</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID148">
+                      <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID151">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">389,117.5</av:Point>
@@ -2308,7 +2345,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingApproval" RunAsUICommand="False" Title="AwaitingApprovalAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID152">
+                          <p1:FlowStep x:Name="__ReferenceID155">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">790,239.5</av:Point>
@@ -2320,7 +2357,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID151">
+                      <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID154">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">379,1127.5</av:Point>
@@ -2330,7 +2367,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowRejectDialog" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Rejected" RunAsUICommand="False" Title="RejectAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID154">
+                          <p1:FlowStep x:Name="__ReferenceID157">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">719,1209.5</av:Point>
@@ -2340,7 +2377,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().Undo().SaveChanges()]" sap:VirtualizedContainerService.HintSize="339,161" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID155">
+                              <p1:FlowStep x:Name="__ReferenceID158">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">1064,1193.5</av:Point>
@@ -2353,7 +2390,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID150">
+                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID153">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">370,790.5</av:Point>
@@ -2363,7 +2400,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="2" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID161">
+                          <p1:FlowStep x:Name="__ReferenceID164">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">370,919</av:Point>
@@ -2380,7 +2417,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="SendForPublishing" x:Name="__ReferenceID149">
+                      <p1:FlowStep x:Key="SendForPublishing" x:Name="__ReferenceID152">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">369,447.5</av:Point>
@@ -2390,7 +2427,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingPublishing" RunAsUICommand="False" Title="SendForPublishingAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID153">
+                          <p1:FlowStep x:Name="__ReferenceID156">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">714.5,429.5</av:Point>
@@ -2400,7 +2437,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().CheckIn().SaveChanges()]" sap:VirtualizedContainerService.HintSize="353,161" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID156">
+                              <p1:FlowStep x:Name="__ReferenceID159">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">1144,553.5</av:Point>
@@ -2413,7 +2450,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID157">
+                      <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID160">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">670,0.5</av:Point>
@@ -2422,7 +2459,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="Exclusive" RunAsUICommand="True" Title="Preview" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID158">
+                      <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID161">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1540,410.5</av:Point>
@@ -2432,7 +2469,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" ActionName="UpdateContent" ArgumentDialogName="" AvailableOnlyIfState="" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID159">
+                          <p1:FlowStep x:Name="__ReferenceID162">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">1064.5,1049.5</av:Point>
@@ -2443,7 +2480,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID160">
+                      <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID163">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">30,280.5</av:Point>
@@ -2453,9 +2490,6 @@
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                       </p1:FlowStep>
                     </p1:FlowSwitch>
-                    <x:Reference>__ReferenceID148</x:Reference>
-                    <x:Reference>__ReferenceID149</x:Reference>
-                    <x:Reference>__ReferenceID150</x:Reference>
                     <x:Reference>__ReferenceID151</x:Reference>
                     <x:Reference>__ReferenceID152</x:Reference>
                     <x:Reference>__ReferenceID153</x:Reference>
@@ -2467,12 +2501,15 @@
                     <x:Reference>__ReferenceID159</x:Reference>
                     <x:Reference>__ReferenceID160</x:Reference>
                     <x:Reference>__ReferenceID161</x:Reference>
+                    <x:Reference>__ReferenceID162</x:Reference>
+                    <x:Reference>__ReferenceID163</x:Reference>
+                    <x:Reference>__ReferenceID164</x:Reference>
                   </p1:Flowchart>
                 </p1:FlowStep>
               </p1:FlowStep.Next>
             </p1:FlowStep>
-            <x:Reference>__ReferenceID163<x:Key>AwaitingApproval</x:Key></x:Reference>
-            <p1:FlowStep x:Key="AwaitingPublishing" x:Name="__ReferenceID197">
+            <x:Reference>__ReferenceID166<x:Key>AwaitingApproval</x:Key></x:Reference>
+            <p1:FlowStep x:Key="AwaitingPublishing" x:Name="__ReferenceID200">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">856.5,417.5</av:Point>
@@ -2482,10 +2519,10 @@
               </sap:WorkflowViewStateService.ViewState>
               <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
               <p1:FlowStep.Next>
-                <x:Reference>__ReferenceID164</x:Reference>
+                <x:Reference>__ReferenceID167</x:Reference>
               </p1:FlowStep.Next>
             </p1:FlowStep>
-            <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID198">
+            <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID201">
               <sap:WorkflowViewStateService.ViewState>
                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">510,54.5</av:Point>
@@ -2504,9 +2541,9 @@
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <p1:Flowchart.StartNode>
-                  <x:Reference>__ReferenceID194</x:Reference>
+                  <x:Reference>__ReferenceID197</x:Reference>
                 </p1:Flowchart.StartNode>
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID194" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID197" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -2524,7 +2561,7 @@
                       <av:PointCollection x:Key="Mobile previewConnector">270,207.75 253.5,207.75 253.5,259.5 283.5,259.5 283.5,330.5 910,330.5 910,380.5 1040,380.5 1040,410.5</av:PointCollection>
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID176">
+                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID179">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">940,290.5</av:Point>
@@ -2533,7 +2570,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="Exclusive" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID182">
+                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID185">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1573,289.5</av:Point>
@@ -2543,7 +2580,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap:VirtualizedContainerService.HintSize="214,61" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID181">
+                      <p1:FlowStep x:Name="__ReferenceID184">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1609,489.5</av:Point>
@@ -2555,7 +2592,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID185">
+                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID188">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">606.5,217.5</av:Point>
@@ -2565,7 +2602,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID165">
+                      <p1:FlowStep x:Name="__ReferenceID168">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">640,360.5</av:Point>
@@ -2575,7 +2612,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Publish" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID168">
+                          <p1:FlowStep x:Name="__ReferenceID171">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">656.5,949.5</av:Point>
@@ -2588,7 +2625,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID186">
+                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID189">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">6.5,267.5</av:Point>
@@ -2598,7 +2635,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID167">
+                      <p1:FlowStep x:Name="__ReferenceID170">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">20,420.5</av:Point>
@@ -2608,7 +2645,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Published" ClosesForm="False" CssClass="sfLinkBtn" DisplayName="Unpublish" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="6" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID175">
+                          <p1:FlowStep x:Name="__ReferenceID178">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">2,949.5</av:Point>
@@ -2621,7 +2658,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID187">
+                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID190">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1216.5,167.5</av:Point>
@@ -2631,7 +2668,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="247,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID177">
+                      <p1:FlowStep x:Name="__ReferenceID180">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1250,290.5</av:Point>
@@ -2641,7 +2678,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Schedule" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID178">
+                          <p1:FlowStep x:Name="__ReferenceID181">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">1310,789.5</av:Point>
@@ -2651,7 +2688,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.SaveChanges()]" sap:VirtualizedContainerService.HintSize="200,161" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID180">
+                              <p1:FlowStep x:Name="__ReferenceID183">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">1271.5,1011.5</av:Point>
@@ -2661,7 +2698,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.AsStandardPage().Get().Page.PublicationDate]" sap:VirtualizedContainerService.HintSize="297,197" OperationName="ScheduledPublish" />
                                 <p1:FlowStep.Next>
-                                  <p1:FlowStep x:Name="__ReferenceID179">
+                                  <p1:FlowStep x:Name="__ReferenceID182">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">1235.5,1301.5</av:Point>
@@ -2678,7 +2715,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID188">
+                  <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID191">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">1926.5,117.5</av:Point>
@@ -2688,7 +2725,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="247,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID184">
+                      <p1:FlowStep x:Name="__ReferenceID187">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1940,280.5</av:Point>
@@ -2698,7 +2735,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" CssClass="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Scheduled" ClosesForm="False" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="AwaitingPublishing" RunAsUICommand="False" Title="StopScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID183">
+                          <p1:FlowStep x:Name="__ReferenceID186">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">1920,759.5</av:Point>
@@ -2712,7 +2749,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID189">
+                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID192">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">346.5,387.5</av:Point>
@@ -2722,7 +2759,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID166">
+                      <p1:FlowStep x:Name="__ReferenceID169">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">400,570.5</av:Point>
@@ -2732,7 +2769,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID193">
+                          <p1:FlowStep x:Name="__ReferenceID196">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">400,700</av:Point>
@@ -2751,7 +2788,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID191">
+                  <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID194">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">2238,280</av:Point>
@@ -2761,7 +2798,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID190">
+                      <p1:FlowStep x:Name="__ReferenceID193">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">2244.5,959.5</av:Point>
@@ -2772,7 +2809,7 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID192">
+                  <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID195">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">940,410.5</av:Point>
@@ -2782,10 +2819,10 @@
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                   </p1:FlowStep>
                 </p1:FlowSwitch>
-                <x:Reference>__ReferenceID165</x:Reference>
-                <x:Reference>__ReferenceID166</x:Reference>
-                <x:Reference>__ReferenceID167</x:Reference>
                 <x:Reference>__ReferenceID168</x:Reference>
+                <x:Reference>__ReferenceID169</x:Reference>
+                <x:Reference>__ReferenceID170</x:Reference>
+                <x:Reference>__ReferenceID171</x:Reference>
                 <p1:FlowStep>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2805,9 +2842,9 @@
                       </scg3:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <p1:Flowchart.StartNode>
-                      <x:Reference>__ReferenceID174</x:Reference>
+                      <x:Reference>__ReferenceID177</x:Reference>
                     </p1:Flowchart.StartNode>
-                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID174" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
+                    <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID177" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="60,75">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">270,142.5</av:Point>
@@ -2820,7 +2857,7 @@
                           <av:PointCollection x:Key="RejectConnector">285,217.5 285,963 815.5,963 815.5,843 845.5,843</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID169">
+                      <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID172">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">483.5,43.5</av:Point>
@@ -2830,7 +2867,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Schedule" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID173">
+                          <p1:FlowStep x:Name="__ReferenceID176">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">775.5,59.5</av:Point>
@@ -2841,7 +2878,7 @@
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID170">
+                      <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID173">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">463.5,303.5</av:Point>
@@ -2850,7 +2887,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" Title="PublishAction" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID171">
+                      <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID174">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,613.5</av:Point>
@@ -2859,7 +2896,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="4" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="DeleteAction" />
                       </p1:FlowStep>
-                      <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID172">
+                      <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID175">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">453.5,983.5</av:Point>
@@ -2869,11 +2906,11 @@
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="253,213" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Unpublished" RunAsUICommand="False" Title="UnpublishAction" />
                       </p1:FlowStep>
                     </p1:FlowSwitch>
-                    <x:Reference>__ReferenceID169</x:Reference>
-                    <x:Reference>__ReferenceID170</x:Reference>
-                    <x:Reference>__ReferenceID171</x:Reference>
                     <x:Reference>__ReferenceID172</x:Reference>
                     <x:Reference>__ReferenceID173</x:Reference>
+                    <x:Reference>__ReferenceID174</x:Reference>
+                    <x:Reference>__ReferenceID175</x:Reference>
+                    <x:Reference>__ReferenceID176</x:Reference>
                     <p1:FlowStep>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2885,9 +2922,6 @@
                     </p1:FlowStep>
                   </p1:Flowchart>
                 </p1:FlowStep>
-                <x:Reference>__ReferenceID175</x:Reference>
-                <x:Reference>__ReferenceID176</x:Reference>
-                <x:Reference>__ReferenceID177</x:Reference>
                 <x:Reference>__ReferenceID178</x:Reference>
                 <x:Reference>__ReferenceID179</x:Reference>
                 <x:Reference>__ReferenceID180</x:Reference>
@@ -2896,6 +2930,9 @@
                 <x:Reference>__ReferenceID183</x:Reference>
                 <x:Reference>__ReferenceID184</x:Reference>
                 <x:Reference>__ReferenceID185</x:Reference>
+                <x:Reference>__ReferenceID186</x:Reference>
+                <x:Reference>__ReferenceID187</x:Reference>
+                <x:Reference>__ReferenceID188</x:Reference>
                 <p1:FlowStep>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2906,30 +2943,30 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap:VirtualizedContainerService.HintSize="264,105" WorkflowPermissions="Publish" />
                 </p1:FlowStep>
-                <x:Reference>__ReferenceID186</x:Reference>
-                <x:Reference>__ReferenceID187</x:Reference>
-                <x:Reference>__ReferenceID188</x:Reference>
                 <x:Reference>__ReferenceID189</x:Reference>
                 <x:Reference>__ReferenceID190</x:Reference>
                 <x:Reference>__ReferenceID191</x:Reference>
                 <x:Reference>__ReferenceID192</x:Reference>
                 <x:Reference>__ReferenceID193</x:Reference>
+                <x:Reference>__ReferenceID194</x:Reference>
+                <x:Reference>__ReferenceID195</x:Reference>
+                <x:Reference>__ReferenceID196</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
           </p1:FlowSwitch>
-          <x:Reference>__ReferenceID195</x:Reference>
-          <x:Reference>__ReferenceID196</x:Reference>
-          <x:Reference>__ReferenceID163</x:Reference>
-          <x:Reference>__ReferenceID197</x:Reference>
           <x:Reference>__ReferenceID198</x:Reference>
+          <x:Reference>__ReferenceID199</x:Reference>
+          <x:Reference>__ReferenceID166</x:Reference>
+          <x:Reference>__ReferenceID200</x:Reference>
+          <x:Reference>__ReferenceID201</x:Reference>
         </p1:Flowchart>
         <p1:FlowStep.Next>
-          <x:Reference>__ReferenceID200</x:Reference>
+          <x:Reference>__ReferenceID203</x:Reference>
         </p1:FlowStep.Next>
       </p1:FlowStep>
-      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID232" Expression="[workflowExecutionDefinition.WorkflowType]" sap:VirtualizedContainerService.HintSize="70,87">
+      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID235" Expression="[workflowExecutionDefinition.WorkflowType]" sap:VirtualizedContainerService.HintSize="70,87">
         <p1:FlowSwitch.Default>
-          <p1:FlowStep x:Name="__ReferenceID231">
+          <p1:FlowStep x:Name="__ReferenceID234">
             <sap:WorkflowViewStateService.ViewState>
               <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">500,104.5</av:Point>
@@ -2952,9 +2989,9 @@
                 </scg3:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <p1:Flowchart.StartNode>
-                <x:Reference>__ReferenceID230</x:Reference>
+                <x:Reference>__ReferenceID233</x:Reference>
               </p1:Flowchart.StartNode>
-              <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID204}" x:Name="__ReferenceID230" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
+              <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID207}" x:Name="__ReferenceID233" Expression="[operationName]" sap:VirtualizedContainerService.HintSize="70,87">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">270,102.5</av:Point>
@@ -2974,7 +3011,7 @@
                     <av:PointCollection x:Key="Mobile previewConnector">322.5,102.5 322.5,80 1020,80 1020,380 1050,380</av:PointCollection>
                   </scg3:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID210">
+                <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID213">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">560,250.5</av:Point>
@@ -2984,7 +3021,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" AvailableOnlyIfState="Published" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Unpublish" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID211">
+                    <p1:FlowStep x:Name="__ReferenceID214">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">492,759.5</av:Point>
@@ -2995,7 +3032,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID206">
+                <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID209">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">800,250.5</av:Point>
@@ -3005,7 +3042,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="1" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID209">
+                    <p1:FlowStep x:Name="__ReferenceID212">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">720,479.5</av:Point>
@@ -3016,7 +3053,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID212">
+                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID215">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1060,240.5</av:Point>
@@ -3025,7 +3062,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="Exclusive" RunAsUICommand="True" Title="Preview" />
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID205">
+                <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID208">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1320,250.5</av:Point>
@@ -3035,7 +3072,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Publish" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID208">
+                    <p1:FlowStep x:Name="__ReferenceID211">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1235.5,479.5</av:Point>
@@ -3046,7 +3083,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID216">
+                <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID219">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1550,260.5</av:Point>
@@ -3056,7 +3093,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Schedule" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID215">
+                    <p1:FlowStep x:Name="__ReferenceID218">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1333.5,779.5</av:Point>
@@ -3066,7 +3103,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.AsStandardPage().CheckOut().CheckIn().SaveChanges()]" sap:VirtualizedContainerService.HintSize="353,161" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID214">
+                        <p1:FlowStep x:Name="__ReferenceID217">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1350.5,981.5</av:Point>
@@ -3076,7 +3113,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.AsStandardPage().Get().Page.PublicationDate]" sap:VirtualizedContainerService.HintSize="299,197" OperationName="ScheduledPublish" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID213">
+                            <p1:FlowStep x:Name="__ReferenceID216">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">1344.5,1261.5</av:Point>
@@ -3091,7 +3128,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID218">
+                <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID221">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1853,259.5</av:Point>
@@ -3101,7 +3138,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap:VirtualizedContainerService.HintSize="214,61" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID217">
+                    <p1:FlowStep x:Name="__ReferenceID220">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1786.5,469.5</av:Point>
@@ -3113,7 +3150,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID222" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
+                <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID225" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">90,332.5</av:Point>
@@ -3124,7 +3161,7 @@
                     </scg3:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <p1:FlowDecision.True>
-                    <p1:FlowStep x:Name="__ReferenceID221">
+                    <p1:FlowStep x:Name="__ReferenceID224">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">68,490</av:Point>
@@ -3134,7 +3171,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Draft" AvailableOnlyIfStateNot="" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" MultilingualWarning="" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Published" RunAsUICommand="False" Title="DiscardDraftAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID223">
+                        <p1:FlowStep x:Name="__ReferenceID226">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">7.5,719.5</av:Point>
@@ -3148,7 +3185,7 @@
                     </p1:FlowStep>
                   </p1:FlowDecision.True>
                   <p1:FlowDecision.False>
-                    <p1:FlowStep x:Name="__ReferenceID204">
+                    <p1:FlowStep x:Name="__ReferenceID207">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">200,459</av:Point>
@@ -3159,7 +3196,7 @@
                     </p1:FlowStep>
                   </p1:FlowDecision.False>
                 </p1:FlowDecision>
-                <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID207">
+                <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID210">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">440,440.5</av:Point>
@@ -3169,7 +3206,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" ClosesForm="True" CodeExecutionResult="False" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="2" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID229">
+                    <p1:FlowStep x:Name="__ReferenceID232">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">320,1049</av:Point>
@@ -3186,7 +3223,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID219">
+                <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID222">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">2090,260.5</av:Point>
@@ -3196,7 +3233,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" CssClass="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Scheduled" ClosesForm="False" HideIfNoStatus="True" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Draft" RunAsUICommand="False" Title="StopScheduleAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID220">
+                    <p1:FlowStep x:Name="__ReferenceID223">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">2070,739.5</av:Point>
@@ -3208,7 +3245,7 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID227">
+                <p1:FlowStep x:Key="UpdateContent" x:Name="__ReferenceID230">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">2740,190.5</av:Point>
@@ -3218,7 +3255,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="UpdateContent" ClosesForm="False" ContentCommandName="UpdateContent" CssClass="sfLinkBtn sfSave" DisplayName="UpdateContent" HideIfNoStatus="False" HideInUI="True" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UpdateContent" />
                   <p1:FlowStep.Next>
-                    <p1:FlowDecision x:Name="__ReferenceID224" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
+                    <p1:FlowDecision x:Name="__ReferenceID227" Condition="[IsItemPublished]" sap:VirtualizedContainerService.HintSize="70,87">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">2810,322.5</av:Point>
@@ -3230,7 +3267,7 @@
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <p1:FlowDecision.True>
-                        <p1:FlowDecision x:Name="__ReferenceID226" Condition="[IsDraftVersionNewerThanPublished]" sap:VirtualizedContainerService.HintSize="70,87">
+                        <p1:FlowDecision x:Name="__ReferenceID229" Condition="[IsDraftVersionNewerThanPublished]" sap:VirtualizedContainerService.HintSize="70,87">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">2850,872.5</av:Point>
@@ -3242,7 +3279,7 @@
                             </scg3:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <p1:FlowDecision.True>
-                            <p1:FlowStep x:Name="__ReferenceID203">
+                            <p1:FlowStep x:Name="__ReferenceID206">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">2948,539.5</av:Point>
@@ -3254,7 +3291,7 @@
                             </p1:FlowStep>
                           </p1:FlowDecision.True>
                           <p1:FlowDecision.False>
-                            <p1:FlowStep x:Name="__ReferenceID225">
+                            <p1:FlowStep x:Name="__ReferenceID228">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">2480,969.5</av:Point>
@@ -3267,12 +3304,12 @@
                         </p1:FlowDecision>
                       </p1:FlowDecision.True>
                       <p1:FlowDecision.False>
-                        <x:Reference>__ReferenceID203</x:Reference>
+                        <x:Reference>__ReferenceID206</x:Reference>
                       </p1:FlowDecision.False>
                     </p1:FlowDecision>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID228">
+                <p1:FlowStep x:Key="Mobile preview" x:Name="__ReferenceID231">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1050,350.5</av:Point>
@@ -3282,9 +3319,6 @@
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResultStatus="{x:Null}" ClosesForm="False" ContentCommandName="mobile-preview" CssClass="sfLinkBtn sfPreview" DisplayName="Mobile Preview" HideIfNoStatus="False" HideInUI="False" sap:VirtualizedContainerService.HintSize="200,59" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" RunAsUICommand="True" Title="MobilePreview" />
                 </p1:FlowStep>
               </p1:FlowSwitch>
-              <x:Reference>__ReferenceID205</x:Reference>
-              <x:Reference>__ReferenceID206</x:Reference>
-              <x:Reference>__ReferenceID207</x:Reference>
               <x:Reference>__ReferenceID208</x:Reference>
               <x:Reference>__ReferenceID209</x:Reference>
               <x:Reference>__ReferenceID210</x:Reference>
@@ -3300,18 +3334,21 @@
               <x:Reference>__ReferenceID220</x:Reference>
               <x:Reference>__ReferenceID221</x:Reference>
               <x:Reference>__ReferenceID222</x:Reference>
-              <x:Reference>__ReferenceID204</x:Reference>
               <x:Reference>__ReferenceID223</x:Reference>
-              <x:Reference>__ReferenceID203</x:Reference>
               <x:Reference>__ReferenceID224</x:Reference>
               <x:Reference>__ReferenceID225</x:Reference>
+              <x:Reference>__ReferenceID207</x:Reference>
               <x:Reference>__ReferenceID226</x:Reference>
+              <x:Reference>__ReferenceID206</x:Reference>
               <x:Reference>__ReferenceID227</x:Reference>
               <x:Reference>__ReferenceID228</x:Reference>
               <x:Reference>__ReferenceID229</x:Reference>
+              <x:Reference>__ReferenceID230</x:Reference>
+              <x:Reference>__ReferenceID231</x:Reference>
+              <x:Reference>__ReferenceID232</x:Reference>
             </p1:Flowchart>
             <p1:FlowStep.Next>
-              <x:Reference>__ReferenceID200</x:Reference>
+              <x:Reference>__ReferenceID203</x:Reference>
             </p1:FlowStep.Next>
           </p1:FlowStep>
         </p1:FlowSwitch.Default>
@@ -3324,11 +3361,11 @@
             <av:PointCollection x:Key="StandardTwoStepConnector">290,327.75 320,327.75 320,410 500,410</av:PointCollection>
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <x:Reference>__ReferenceID201<x:Key>StandardOneStep</x:Key></x:Reference>
-        <x:Reference>__ReferenceID202<x:Key>StandardTwoStep</x:Key></x:Reference>
+        <x:Reference>__ReferenceID204<x:Key>StandardOneStep</x:Key></x:Reference>
+        <x:Reference>__ReferenceID205<x:Key>StandardTwoStep</x:Key></x:Reference>
       </p1:FlowSwitch>
-      <x:Reference>__ReferenceID231</x:Reference>
-            <p1:FlowDecision x:Name="__ReferenceID233" Condition="[workflowExecutionDefinition.CanUserSkip()]" sap:VirtualizedContainerService.HintSize="70,87" True="{x:Reference __ReferenceID231}" False="{x:Reference __ReferenceID232}">
+      <x:Reference>__ReferenceID234</x:Reference>
+      <p1:FlowDecision x:Name="__ReferenceID236" Condition="[workflowExecutionDefinition.CanUserSkip()]" sap:VirtualizedContainerService.HintSize="70,87" True="{x:Reference __ReferenceID234}" False="{x:Reference __ReferenceID235}">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">130,262.5</av:Point>
@@ -3338,9 +3375,9 @@
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </p1:FlowDecision>
-      <x:Reference>__ReferenceID200</x:Reference>
+      <x:Reference>__ReferenceID203</x:Reference>
     </p1:Flowchart>
-    <SendReply Request="{x:Reference __ReferenceID234}" DisplayName="SendResponse" sap:VirtualizedContainerService.HintSize="255,90">
+    <SendReply Request="{x:Reference __ReferenceID237}" DisplayName="SendResponse" sap:VirtualizedContainerService.HintSize="255,90">
       <SendParametersContent>
         <p1:InArgument x:TypeArguments="x:String" x:Key="result">[result]</p1:InArgument>
       </SendParametersContent>
