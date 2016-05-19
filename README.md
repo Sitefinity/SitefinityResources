@@ -1,7 +1,7 @@
-SitefinityResources
+Progress Sitefinity CMS Resources
 ===================
 
-This repository contains an extract of Sitefinity's basic themes, workflows and templates. For previous versions of the resources see the [Releases](https://github.com/Sitefinity-SDK/SitefinityResources/releases "SitefinityResources releases") page.   
+This repository contains an extract of the Sitefinity CMS basic themes, workflows and templates. For previous versions of the resources see the [Releases](https://github.com/Sitefinity-SDK/SitefinityResources/releases "SitefinityResources releases") page.   
 (**Note** that the [workflow files](https://github.com/Sitefinity-SDK/SitefinityResources/tree/master/Workflows) are not archived, in order to allow easy comparison between [commits](https://github.com/Sitefinity-SDK/SitefinityResources/commits/master) via Github's online comparison tool).
 
 Also you can find the API Reference for Visual Studio's Help Viewer here:
