@@ -62,7 +62,7 @@
  xmlns:tswm="clr-namespace:Telerik.Sitefinity.Workflow.Model;assembly=Telerik.Sitefinity.Model"
  xmlns:tswsd="clr-namespace:Telerik.Sitefinity.Workflow.Services.Data;assembly=Telerik.Sitefinity"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <p1:Sequence DisplayName="Content Approval Workflow Service" sad:XamlDebuggerXmlReader.FileName="C:\CMS\Sitefinity 4.0\Code Base\Telerik.Sitefinity\Workflow\Workflows\ApprovalWorkflow.xamlx" sap:VirtualizedContainerService.HintSize="2032,1910" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+  <p1:Sequence DisplayName="Content Approval Workflow Service" sad:XamlDebuggerXmlReader.FileName="C:\Work\Niki_Main\Telerik.Sitefinity\Workflow\Workflows\ApprovalWorkflow.xamlx" sap:VirtualizedContainerService.HintSize="2032,1910" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
     <p1:Sequence.Variables>
       <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
       <p1:Variable x:TypeArguments="x:String" Name="operationName" />
@@ -103,7 +103,7 @@
         <p1:Variable x:TypeArguments="tslf:TempFacade" Default="[CType(If(masterFluent.IsCheckedOut(), masterFluent.GetTemp(), Nothing), TempFacade)]" Name="fluent" />
         <p1:Variable x:TypeArguments="mic:IClaimsPrincipal" Default="[ClaimsManager.GetCurrentPrincipal()]" Name="currentPrincipal" />
         <p1:Variable x:TypeArguments="ts:IWorkflowItem" Default="[CType(If(masterFluent.IsCheckedOut(), fluent.GetAs(Of IWorkflowItem)(), masterFluent.GetAs(Of IWorkflowItem)()), IWorkflowItem)]" Name="workflowItem" />
-                <p1:Variable x:TypeArguments="x:String" Default="[masterFluent.GetAs(Of IApprovalWorkflowItem)().GetWorkflowState()]" Name="itemStatus" />
+        <p1:Variable x:TypeArguments="x:String" Default="[masterFluent.GetAs(Of IApprovalWorkflowItem)().GetWorkflowState()]" Name="itemStatus" />
         <p1:Variable x:TypeArguments="x:Boolean" Default="[masterFluent.IsPublished()]" Name="IsItemPublished" />
       </p1:Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
@@ -2715,7 +2715,7 @@
                     <av:Point x:Key="ShapeLocation">280,122.5</av:Point>
                     <av:Size x:Key="ShapeSize">70,87</av:Size>
                     <av:PointCollection x:Key="PublishConnector">297.5,209.5 297.5,239.5 288,239.5 288,447</av:PointCollection>
-                    <av:PointCollection x:Key="SaveDraftConnector">315,209.5 315,450 480,450</av:PointCollection>
+                    <av:PointCollection x:Key="SaveDraftConnector">315,209.5 315,239.5 450,239.5 450,450 480,450</av:PointCollection>
                     <av:PointCollection x:Key="DeleteConnector">280,187.75 160,187.75 160,870 410,870</av:PointCollection>
                     <av:PointCollection x:Key="SavePrivateDraftConnector">310,197.5 310,990 330,990</av:PointCollection>
                     <av:PointCollection x:Key="ScheduleConnector">350,144.25 380,144.25 380,140 460,140</av:PointCollection>
@@ -2762,21 +2762,21 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">713,69.5</av:Point>
-                          <av:Size x:Key="ShapeSize">216,161</av:Size>
+                          <av:Size x:Key="ShapeSize">215,161</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">929,150 959,150 959,168 985,168</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap:VirtualizedContainerService.HintSize="216,161" />
+                      <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap:VirtualizedContainerService.HintSize="215,161" />
                       <p1:FlowStep.Next>
                         <p1:FlowStep x:Name="__ReferenceID191">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">985,71.5</av:Point>
-                              <av:Size x:Key="ShapeSize">437,193</av:Size>
+                              <av:Size x:Key="ShapeSize">436,193</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">1422,168 1410,168 1410,161</av:PointCollection>
                             </scg3:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <tswa:ScheduleWorkflowCallActivity ExecuteOn="[masterFluent.GetAs(Of Telerik.Sitefinity.Model.IScheduleable).PublicationDate]" sap:VirtualizedContainerService.HintSize="437,193" OperationName="ScheduledPublish" />
+                          <tswa:ScheduleWorkflowCallActivity ExecuteOn="[masterFluent.GetAs(Of Telerik.Sitefinity.Model.IScheduleable).PublicationDate]" sap:VirtualizedContainerService.HintSize="436,193" OperationName="ScheduledPublish" />
                           <p1:FlowStep.Next>
                             <p1:FlowStep x:Name="__ReferenceID190">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2807,11 +2807,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1109,289.5</av:Point>
-                          <av:Size x:Key="ShapeSize">784,161</av:Size>
+                          <av:Size x:Key="ShapeSize">783,161</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">1089,470 1269,470 1269,1118 1220,1118 1220,1148</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(If(masterFluent.IsCheckedOut(),&#xA;fluent.CheckIn().PublishWithSpecificDate(fluent.GetAs(Of Telerik.Sitefinity.Model.IScheduleable).PublicationDate).SaveChanges(),&#xA;masterFluent.PublishWithSpecificDate(masterFluent.GetAs(Of Telerik.Sitefinity.Model.IScheduleable).PublicationDate).SaveChanges()), Boolean)]" sap:VirtualizedContainerService.HintSize="784,161" />
+                      <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(If(masterFluent.IsCheckedOut(),&#xA;fluent.CheckIn().PublishWithSpecificDate(fluent.GetAs(Of Telerik.Sitefinity.Model.IScheduleable).PublicationDate).SaveChanges(),&#xA;masterFluent.PublishWithSpecificDate(masterFluent.GetAs(Of Telerik.Sitefinity.Model.IScheduleable).PublicationDate).SaveChanges()), Boolean)]" sap:VirtualizedContainerService.HintSize="783,161" />
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
@@ -2829,11 +2829,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">877.5,579.5</av:Point>
-                          <av:Size x:Key="ShapeSize">253,161</av:Size>
+                          <av:Size x:Key="ShapeSize">252,161</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">1022.5,700 1240,700 1240,1019.5 1210,1019.5 1210,1138</av:PointCollection>
                         </scg3:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(False).SaveChanges()]" sap:VirtualizedContainerService.HintSize="253,161" />
+                      <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(False).SaveChanges()]" sap:VirtualizedContainerService.HintSize="252,161" />
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
@@ -2868,11 +2868,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1130,770.5</av:Point>
-                              <av:Size x:Key="ShapeSize">369,161</av:Size>
+                              <av:Size x:Key="ShapeSize">367,161</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">1135,1000 1210,1000 1210,1138</av:PointCollection>
                             </scg3:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(&#xA;If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).GetLive().Unpublish().SaveChanges(),&#xA;masterFluent.GetLive().Unpublish().SaveChanges()), Boolean)]" sap:VirtualizedContainerService.HintSize="369,161" />
+                          <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(&#xA;If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).GetLive().Unpublish().SaveChanges(),&#xA;masterFluent.GetLive().Unpublish().SaveChanges()), Boolean)]" sap:VirtualizedContainerService.HintSize="367,161" />
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
@@ -2930,11 +2930,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">865.5,1139.5</av:Point>
-                              <av:Size x:Key="ShapeSize">251,161</av:Size>
+                              <av:Size x:Key="ShapeSize">249,161</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">179,860.5 179,1322 1220,1322 1220,1292</av:PointCollection>
                             </scg3:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(True).SaveChanges()]" sap:VirtualizedContainerService.HintSize="251,161" />
+                          <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(True).SaveChanges()]" sap:VirtualizedContainerService.HintSize="249,161" />
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
@@ -2964,11 +2964,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg3:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">363.5,1299.5</av:Point>
-                              <av:Size x:Key="ShapeSize">271,161</av:Size>
+                              <av:Size x:Key="ShapeSize">314,161</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">750,659.5 750,820.5</av:PointCollection>
                             </scg3:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <tswa:ExecuteCodeActivity CodeExecutionResult="{x:Null}" sap:VirtualizedContainerService.HintSize="271,161" />
+                          <tswa:ExecuteCodeActivity CodeExecutionResult="[masterFluent.GetLive().CopyToMaster().SaveChanges()]" sap:VirtualizedContainerService.HintSize="314,161" />
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
