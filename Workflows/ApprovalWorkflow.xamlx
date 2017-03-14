@@ -2,7 +2,6 @@
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
  xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:mic="clr-namespace:Microsoft.IdentityModel.Claims;assembly=Microsoft.IdentityModel"
  xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
  xmlns:p="http://tempuri.org/"
@@ -24,6 +23,7 @@
  xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
  xmlns:sg="clr-namespace:System.Globalization;assembly=mscorlib"
  xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+ xmlns:ssc="clr-namespace:System.Security.Claims;assembly=mscorlib"
  xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=Microsoft.Http.Extensions"
  xmlns:srs1="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization"
  xmlns:srs2="clr-namespace:System.Runtime.Serialization;assembly=Telerik.Sitefinity.Utilities"
@@ -101,7 +101,7 @@
       <p1:Flowchart.Variables>
         <p1:Variable x:TypeArguments="tslf:MasterFacade" Default="[App.Prepare().SetContentProvider(providerName).WorkWith().Lifecycle().Master(contextBag(&quot;ContentType&quot;), itemId)]" Name="masterFluent" />
         <p1:Variable x:TypeArguments="tslf:TempFacade" Default="[CType(If(masterFluent.IsCheckedOut(), masterFluent.GetTemp(), Nothing), TempFacade)]" Name="fluent" />
-        <p1:Variable x:TypeArguments="mic:IClaimsPrincipal" Default="[ClaimsManager.GetCurrentPrincipal()]" Name="currentPrincipal" />
+        <p1:Variable x:TypeArguments="ssc:ClaimsPrincipal" Default="[ClaimsManager.GetCurrentPrincipal()]" Name="currentPrincipal" />
         <p1:Variable x:TypeArguments="ts:IWorkflowItem" Default="[CType(If(masterFluent.IsCheckedOut(), fluent.GetAs(Of IWorkflowItem)(), masterFluent.GetAs(Of IWorkflowItem)()), IWorkflowItem)]" Name="workflowItem" />
         <p1:Variable x:TypeArguments="x:String" Default="[masterFluent.GetAs(Of IApprovalWorkflowItem)().GetWorkflowState()]" Name="itemStatus" />
         <p1:Variable x:TypeArguments="x:Boolean" Default="[masterFluent.IsPublished()]" Name="IsItemPublished" />
