@@ -6,7 +6,8 @@ This repository contains an extract of the Sitefinity CMS basic themes, workflow
 
 Also you can find the API Reference for Visual Studio's Help Viewer here:
 
-- [API Reference for Sitefinity CMS 10.2](https://sitefinitystore.blob.core.windows.net/apireference/Sitefinity_CMS_API_Reference_10.2.6600.0.zip)
+- [API Reference for Sitefinity CMS 11.0](https://sitefinitystore.blob.core.windows.net/apireference/Sitefinity_CMS_API_Reference_11.0.6700.0.zip)
+- [API Reference for Sitefinity CMS 10.2](http://sitefinity.blob.core.windows.net/files/Sitefinity_CMS_API_Reference_10.2.6600.0.zip)
 - [API Reference for Sitefinity CMS 10.1](http://sitefinity.blob.core.windows.net/files/Sitefinity_CMS_API_Reference_10.1.6500.0.zip)
 - [API Reference for Sitefinity CMS 10.0](http://sitefinity.blob.core.windows.net/files/Sitefinity_CMS_API_Reference_10.0.6400.0.zip)
 - [API Reference for Sitefinity CMS 9.2](http://sitefinity.blob.core.windows.net/files/Sitefinity_CMS_API_Reference_9.2.6200.0.zip)
