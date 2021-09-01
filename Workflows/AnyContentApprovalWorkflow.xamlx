@@ -160,7 +160,7 @@
       <p1:Variable x:TypeArguments="x:String" Name="result" />
       <p1:Variable x:TypeArguments="x:String" Default="[providerName]" Name="providerName" />
     </p1:Sequence.Variables>
-    <Receive x:Name="__ReferenceID372" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="SendMessage" ServiceContractName="p:IService">
+    <Receive x:Name="__ReferenceID374" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="SendMessage" ServiceContractName="p:IService">
       <Receive.CorrelationInitializers>
         <RequestReplyCorrelationInitializer CorrelationHandle="[handle]" />
       </Receive.CorrelationInitializers>
@@ -186,9 +186,9 @@
         <p1:Variable x:TypeArguments="x:Boolean" Default="[masterFluent.IsPublished()]" Name="IsItemPublished" />
       </p1:Flowchart.Variables>
       <p1:Flowchart.StartNode>
-        <x:Reference>__ReferenceID371</x:Reference>
+        <x:Reference>__ReferenceID373</x:Reference>
       </p1:Flowchart.StartNode>
-      <p1:FlowStep x:Name="__ReferenceID211" sap2010:WorkflowViewState.IdRef="FlowStep_85">
+      <p1:FlowStep x:Name="__ReferenceID212" sap2010:WorkflowViewState.IdRef="FlowStep_85">
         <p1:Flowchart DisplayName="One Level Approval Workflow" sap2010:WorkflowViewState.IdRef="Flowchart_7" StartNode="{x:Reference __ReferenceID97}">
           <p1:FlowStep x:Name="__ReferenceID41" sap2010:WorkflowViewState.IdRef="FlowStep_15">
             <p1:Flowchart DisplayName="Pending approval workflow" sap2010:WorkflowViewState.IdRef="Flowchart_1" StartNode="{x:Reference __ReferenceID16}">
@@ -726,13 +726,13 @@
           <x:Reference>__ReferenceID96</x:Reference>
         </p1:Flowchart>
         <p1:FlowStep.Next>
-          <p1:FlowStep x:Name="__ReferenceID210" sap2010:WorkflowViewState.IdRef="FlowStep_84">
+          <p1:FlowStep x:Name="__ReferenceID211" sap2010:WorkflowViewState.IdRef="FlowStep_84">
             <tswa:ClearScheduledOperationsActivity sap2010:WorkflowViewState.IdRef="ClearScheduledOperationsActivity_1" OperationsCondition="Unschedule,Publish,Delete,SavePrivateDraft,Unpublish,StopSchedule" OperationsToClear="Publish,Unpublish" StatusCondition="Scheduled" />
           </p1:FlowStep>
         </p1:FlowStep.Next>
       </p1:FlowStep>
-      <p1:FlowStep x:Name="__ReferenceID212" sap2010:WorkflowViewState.IdRef="FlowStep_168">
-        <p1:Flowchart DisplayName="Two Levels Approval Workflow" sap2010:WorkflowViewState.IdRef="Flowchart_13" StartNode="{x:Reference __ReferenceID209}">
+      <p1:FlowStep x:Name="__ReferenceID213" sap2010:WorkflowViewState.IdRef="FlowStep_168">
+        <p1:Flowchart DisplayName="Two Levels Approval Workflow" sap2010:WorkflowViewState.IdRef="Flowchart_13" StartNode="{x:Reference __ReferenceID210}">
           <p1:FlowStep x:Name="__ReferenceID158" sap2010:WorkflowViewState.IdRef="FlowStep_100">
             <p1:Flowchart DisplayName="Awaiting publishing workflow" sap2010:WorkflowViewState.IdRef="Flowchart_8" StartNode="{x:Reference __ReferenceID114}">
               <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID114" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_8">
@@ -747,9 +747,8 @@
                 <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID100" sap2010:WorkflowViewState.IdRef="FlowStep_89">
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_33" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID113">
+                    <p1:FlowStep x:Name="__ReferenceID113" sap2010:WorkflowViewState.IdRef="FlowStep_377">
                       <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_8" />
-                      <sap2010:WorkflowViewState.IdRef>FlowStep_377</sap2010:WorkflowViewState.IdRef>
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
@@ -798,9 +797,8 @@
                 <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID111" sap2010:WorkflowViewState.IdRef="FlowStep_353">
                   <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_8" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID112">
+                    <p1:FlowStep x:Name="__ReferenceID112" sap2010:WorkflowViewState.IdRef="FlowStep_378">
                       <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_9" />
-                      <sap2010:WorkflowViewState.IdRef>FlowStep_378</sap2010:WorkflowViewState.IdRef>
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
@@ -915,9 +913,8 @@
                 <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID134" sap2010:WorkflowViewState.IdRef="FlowStep_309">
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_106" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID116">
+                    <p1:FlowStep x:Name="__ReferenceID116" sap2010:WorkflowViewState.IdRef="FlowStep_379">
                       <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_10" />
-                      <sap2010:WorkflowViewState.IdRef>FlowStep_379</sap2010:WorkflowViewState.IdRef>
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
@@ -951,14 +948,14 @@
               <x:Reference>__ReferenceID116</x:Reference>
             </p1:Flowchart>
           </p1:FlowStep>
-          <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID137}" x:Name="__ReferenceID209" Expression="[itemStatus]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_13">
+          <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID137}" x:Name="__ReferenceID210" Expression="[itemStatus]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_13">
             <x:Reference>__ReferenceID137<x:Key>Draft</x:Key></x:Reference>
             <x:Reference>__ReferenceID137<x:Key>Rejected</x:Key></x:Reference>
             <x:Reference>__ReferenceID137<x:Key>Unpublished</x:Key></x:Reference>
             <p1:FlowStep x:Key="RejectedForPublishing" x:Name="__ReferenceID157" sap2010:WorkflowViewState.IdRef="FlowStep_126">
               <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_11" WorkflowPermissions="Approve" />
               <p1:FlowStep.Next>
-                <p1:FlowStep x:Name="__ReferenceID206" sap2010:WorkflowViewState.IdRef="FlowStep_125">
+                <p1:FlowStep x:Name="__ReferenceID207" sap2010:WorkflowViewState.IdRef="FlowStep_125">
                   <p1:Flowchart DisplayName="Awaiting approval workflow" sap2010:WorkflowViewState.IdRef="Flowchart_10" StartNode="{x:Reference __ReferenceID156}">
                     <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID156" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_10">
                       <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID139" sap2010:WorkflowViewState.IdRef="FlowStep_115">
@@ -1027,9 +1024,8 @@
                       <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID150" sap2010:WorkflowViewState.IdRef="FlowStep_315">
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_108" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID138">
+                          <p1:FlowStep x:Name="__ReferenceID138" sap2010:WorkflowViewState.IdRef="FlowStep_380">
                             <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_11" />
-                            <sap2010:WorkflowViewState.IdRef>FlowStep_380</sap2010:WorkflowViewState.IdRef>
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
@@ -1063,15 +1059,15 @@
               </p1:FlowStep.Next>
             </p1:FlowStep>
             <x:Reference>__ReferenceID157<x:Key>AwaitingApproval</x:Key></x:Reference>
-            <p1:FlowStep x:Key="AwaitingPublishing" x:Name="__ReferenceID207" sap2010:WorkflowViewState.IdRef="FlowStep_127">
+            <p1:FlowStep x:Key="AwaitingPublishing" x:Name="__ReferenceID208" sap2010:WorkflowViewState.IdRef="FlowStep_127">
               <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_12" WorkflowPermissions="Publish" />
               <p1:FlowStep.Next>
                 <x:Reference>__ReferenceID158</x:Reference>
               </p1:FlowStep.Next>
             </p1:FlowStep>
-            <p1:FlowStep x:Key="Published" x:Name="__ReferenceID205" sap2010:WorkflowViewState.IdRef="FlowStep_142">
-              <p1:Flowchart DisplayName="Published workflow" sap2010:WorkflowViewState.IdRef="Flowchart_11" StartNode="{x:Reference __ReferenceID180}">
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID180" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_11">
+            <p1:FlowStep x:Key="Published" x:Name="__ReferenceID206" sap2010:WorkflowViewState.IdRef="FlowStep_142">
+              <p1:Flowchart DisplayName="Published workflow" sap2010:WorkflowViewState.IdRef="Flowchart_11" StartNode="{x:Reference __ReferenceID181}">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID181" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_11">
                   <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID162" sap2010:WorkflowViewState.IdRef="FlowStep_128">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_48" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
@@ -1138,6 +1134,12 @@
                     <p1:FlowStep.Next>
                       <p1:FlowStep x:Name="__ReferenceID172" sap2010:WorkflowViewState.IdRef="FlowStep_192">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_47" />
+                        <p1:FlowStep.Next>
+                          <p1:FlowStep x:Name="__ReferenceID180">
+                            <tswa:NotifyGroup EmailText="Content or Page has been submitted for your approval in Sitefinity CMS. To see it, log in to Sitefinity Administration and review Awaiting approval items. " Group="Approve" sap2010:WorkflowViewState.IdRef="NotifyGroup_8" />
+                            <sap2010:WorkflowViewState.IdRef>FlowStep_390</sap2010:WorkflowViewState.IdRef>
+                          </p1:FlowStep>
+                        </p1:FlowStep.Next>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
@@ -1162,9 +1164,8 @@
                   <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID174" sap2010:WorkflowViewState.IdRef="FlowStep_321">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_110" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID159">
+                      <p1:FlowStep x:Name="__ReferenceID159" sap2010:WorkflowViewState.IdRef="FlowStep_381">
                         <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_12" />
-                        <sap2010:WorkflowViewState.IdRef>FlowStep_381</sap2010:WorkflowViewState.IdRef>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
@@ -1204,30 +1205,30 @@
                 <x:Reference>__ReferenceID178</x:Reference>
                 <x:Reference>__ReferenceID179</x:Reference>
                 <x:Reference>__ReferenceID159</x:Reference>
+                <x:Reference>__ReferenceID180</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
-            <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID208" sap2010:WorkflowViewState.IdRef="FlowStep_167">
-              <p1:Flowchart DisplayName="Scheduled workflow" sap2010:WorkflowViewState.IdRef="Flowchart_12" StartNode="{x:Reference __ReferenceID204}">
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID204" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_12">
-                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID191" sap2010:WorkflowViewState.IdRef="FlowStep_144">
+            <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID209" sap2010:WorkflowViewState.IdRef="FlowStep_167">
+              <p1:Flowchart DisplayName="Scheduled workflow" sap2010:WorkflowViewState.IdRef="Flowchart_12" StartNode="{x:Reference __ReferenceID205}">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID205" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_12">
+                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID192" sap2010:WorkflowViewState.IdRef="FlowStep_144">
                     <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_2" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID181">
+                      <p1:FlowStep x:Name="__ReferenceID182" sap2010:WorkflowViewState.IdRef="FlowStep_382">
                         <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_13" />
-                        <sap2010:WorkflowViewState.IdRef>FlowStep_382</sap2010:WorkflowViewState.IdRef>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID186" sap2010:WorkflowViewState.IdRef="FlowStep_145">
+                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID187" sap2010:WorkflowViewState.IdRef="FlowStep_145">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_52" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID198" sap2010:WorkflowViewState.IdRef="FlowStep_149">
+                  <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID199" sap2010:WorkflowViewState.IdRef="FlowStep_149">
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_15" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID185" sap2010:WorkflowViewState.IdRef="FlowStep_148">
+                      <p1:FlowStep x:Name="__ReferenceID186" sap2010:WorkflowViewState.IdRef="FlowStep_148">
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Published" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_53" MultilingualWarning="UnPublishInMultilingualWarning" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID197" sap2010:WorkflowViewState.IdRef="FlowStep_147">
+                          <p1:FlowStep x:Name="__ReferenceID198" sap2010:WorkflowViewState.IdRef="FlowStep_147">
                             <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_6">
                               <p1:Assign.To>
                                 <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -1237,7 +1238,7 @@
                               </p1:Assign.Value>
                             </p1:Assign>
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID192" sap2010:WorkflowViewState.IdRef="FlowStep_146">
+                              <p1:FlowStep x:Name="__ReferenceID193" sap2010:WorkflowViewState.IdRef="FlowStep_146">
                                 <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(&#xA;If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).GetLive().Unpublish().SaveChanges(),&#xA;masterFluent.GetLive().Unpublish().SaveChanges()), Boolean)]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_35" />
                               </p1:FlowStep>
                             </p1:FlowStep.Next>
@@ -1246,24 +1247,24 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID199" sap2010:WorkflowViewState.IdRef="FlowStep_152">
+                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID200" sap2010:WorkflowViewState.IdRef="FlowStep_152">
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_16" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID183" sap2010:WorkflowViewState.IdRef="FlowStep_151">
+                      <p1:FlowStep x:Name="__ReferenceID184" sap2010:WorkflowViewState.IdRef="FlowStep_151">
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_54" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                         <p1:FlowStep.Next>
-                          <x:Reference>__ReferenceID181</x:Reference>
+                          <x:Reference>__ReferenceID182</x:Reference>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID200" sap2010:WorkflowViewState.IdRef="FlowStep_156">
+                  <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID201" sap2010:WorkflowViewState.IdRef="FlowStep_156">
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_17" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID195" sap2010:WorkflowViewState.IdRef="FlowStep_155">
+                      <p1:FlowStep x:Name="__ReferenceID196" sap2010:WorkflowViewState.IdRef="FlowStep_155">
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" CssClass="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_55" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="AwaitingPublishing" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="StopScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID196" sap2010:WorkflowViewState.IdRef="FlowStep_154">
+                          <p1:FlowStep x:Name="__ReferenceID197" sap2010:WorkflowViewState.IdRef="FlowStep_154">
                             <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_7">
                               <p1:Assign.To>
                                 <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -1273,7 +1274,7 @@
                               </p1:Assign.Value>
                             </p1:Assign>
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID194" sap2010:WorkflowViewState.IdRef="FlowStep_153">
+                              <p1:FlowStep x:Name="__ReferenceID195" sap2010:WorkflowViewState.IdRef="FlowStep_153">
                                 <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_37" />
                               </p1:FlowStep>
                             </p1:FlowStep.Next>
@@ -1282,19 +1283,19 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID201" sap2010:WorkflowViewState.IdRef="FlowStep_161">
+                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID202" sap2010:WorkflowViewState.IdRef="FlowStep_161">
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_18" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID182" sap2010:WorkflowViewState.IdRef="FlowStep_160">
+                      <p1:FlowStep x:Name="__ReferenceID183" sap2010:WorkflowViewState.IdRef="FlowStep_160">
                         <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_56" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID193" sap2010:WorkflowViewState.IdRef="FlowStep_159">
+                          <p1:FlowStep x:Name="__ReferenceID194" sap2010:WorkflowViewState.IdRef="FlowStep_159">
                             <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_38" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID189" sap2010:WorkflowViewState.IdRef="FlowStep_158">
+                              <p1:FlowStep x:Name="__ReferenceID190" sap2010:WorkflowViewState.IdRef="FlowStep_158">
                                 <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_9" OperationName="ScheduledPublish" />
                                 <p1:FlowStep.Next>
-                                  <p1:FlowStep x:Name="__ReferenceID190" sap2010:WorkflowViewState.IdRef="FlowStep_157">
+                                  <p1:FlowStep x:Name="__ReferenceID191" sap2010:WorkflowViewState.IdRef="FlowStep_157">
                                     <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_10" OperationName="Unpublish" />
                                   </p1:FlowStep>
                                 </p1:FlowStep.Next>
@@ -1305,21 +1306,21 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID187" sap2010:WorkflowViewState.IdRef="FlowStep_163">
+                  <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID188" sap2010:WorkflowViewState.IdRef="FlowStep_163">
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_57" Ordinal="1" PersistOnDecision="True" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID188" sap2010:WorkflowViewState.IdRef="FlowStep_162">
+                      <p1:FlowStep x:Name="__ReferenceID189" sap2010:WorkflowViewState.IdRef="FlowStep_162">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_39" />
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID202" sap2010:WorkflowViewState.IdRef="FlowStep_166">
+                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID203" sap2010:WorkflowViewState.IdRef="FlowStep_166">
                     <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_19" WorkflowPermissions="Publish" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID184" sap2010:WorkflowViewState.IdRef="FlowStep_165">
+                      <p1:FlowStep x:Name="__ReferenceID185" sap2010:WorkflowViewState.IdRef="FlowStep_165">
                         <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_58" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID203" sap2010:WorkflowViewState.IdRef="FlowStep_164">
+                          <p1:FlowStep x:Name="__ReferenceID204" sap2010:WorkflowViewState.IdRef="FlowStep_164">
                             <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_9" />
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
@@ -1327,7 +1328,6 @@
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
                 </p1:FlowSwitch>
-                <x:Reference>__ReferenceID182</x:Reference>
                 <x:Reference>__ReferenceID183</x:Reference>
                 <x:Reference>__ReferenceID184</x:Reference>
                 <x:Reference>__ReferenceID185</x:Reference>
@@ -1349,43 +1349,44 @@
                 <x:Reference>__ReferenceID201</x:Reference>
                 <x:Reference>__ReferenceID202</x:Reference>
                 <x:Reference>__ReferenceID203</x:Reference>
-                <x:Reference>__ReferenceID181</x:Reference>
+                <x:Reference>__ReferenceID204</x:Reference>
+                <x:Reference>__ReferenceID182</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
           </p1:FlowSwitch>
-          <x:Reference>__ReferenceID205</x:Reference>
           <x:Reference>__ReferenceID206</x:Reference>
-          <x:Reference>__ReferenceID157</x:Reference>
           <x:Reference>__ReferenceID207</x:Reference>
+          <x:Reference>__ReferenceID157</x:Reference>
           <x:Reference>__ReferenceID208</x:Reference>
+          <x:Reference>__ReferenceID209</x:Reference>
         </p1:Flowchart>
         <p1:FlowStep.Next>
-          <x:Reference>__ReferenceID210</x:Reference>
+          <x:Reference>__ReferenceID211</x:Reference>
         </p1:FlowStep.Next>
       </p1:FlowStep>
-      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID371" Expression="[workflowExecutionDefinition.WorkflowType]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_15">
+      <p1:FlowSwitch x:TypeArguments="tswm:WorkflowType" x:Name="__ReferenceID373" Expression="[workflowExecutionDefinition.WorkflowType]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_15">
         <p1:FlowSwitch.Default>
-          <p1:FlowStep x:Name="__ReferenceID369" sap2010:WorkflowViewState.IdRef="FlowStep_191">
-            <p1:Flowchart DisplayName="Default workflow" sap2010:WorkflowViewState.IdRef="Flowchart_14" StartNode="{x:Reference __ReferenceID368}">
-              <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID368" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_14">
-                <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID347" sap2010:WorkflowViewState.IdRef="FlowStep_170">
+          <p1:FlowStep x:Name="__ReferenceID371" sap2010:WorkflowViewState.IdRef="FlowStep_191">
+            <p1:Flowchart DisplayName="Default workflow" sap2010:WorkflowViewState.IdRef="Flowchart_14" StartNode="{x:Reference __ReferenceID370}">
+              <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID370" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_14">
+                <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID349" sap2010:WorkflowViewState.IdRef="FlowStep_170">
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Publish" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_59" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID345" sap2010:WorkflowViewState.IdRef="FlowStep_370">
+                    <p1:FlowStep x:Name="__ReferenceID347" sap2010:WorkflowViewState.IdRef="FlowStep_370">
                       <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_1" />
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID351" sap2010:WorkflowViewState.IdRef="FlowStep_174">
+                <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID353" sap2010:WorkflowViewState.IdRef="FlowStep_174">
                   <tswa:DecisionActivity ActionName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfState="" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" DisplayName="Schedule" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_60" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID352" sap2010:WorkflowViewState.IdRef="FlowStep_173">
+                    <p1:FlowStep x:Name="__ReferenceID354" sap2010:WorkflowViewState.IdRef="FlowStep_173">
                       <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_41" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID357" sap2010:WorkflowViewState.IdRef="FlowStep_172">
+                        <p1:FlowStep x:Name="__ReferenceID359" sap2010:WorkflowViewState.IdRef="FlowStep_172">
                           <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_11" OperationName="ScheduledPublish" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID356" sap2010:WorkflowViewState.IdRef="FlowStep_171">
+                            <p1:FlowStep x:Name="__ReferenceID358" sap2010:WorkflowViewState.IdRef="FlowStep_171">
                               <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_12" OperationName="Unpublish" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
@@ -1394,35 +1395,35 @@
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID355" sap2010:WorkflowViewState.IdRef="FlowStep_175">
+                <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID357" sap2010:WorkflowViewState.IdRef="FlowStep_175">
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_61" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID358" sap2010:WorkflowViewState.IdRef="FlowStep_177">
+                <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID360" sap2010:WorkflowViewState.IdRef="FlowStep_177">
                   <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_3" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                   <p1:FlowStep.Next>
-                    <x:Reference>__ReferenceID345</x:Reference>
+                    <x:Reference>__ReferenceID347</x:Reference>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID348" sap2010:WorkflowViewState.IdRef="FlowStep_179">
+                <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID350" sap2010:WorkflowViewState.IdRef="FlowStep_179">
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_62" Ordinal="0" PersistOnDecision="True" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID350" sap2010:WorkflowViewState.IdRef="FlowStep_178">
+                    <p1:FlowStep x:Name="__ReferenceID352" sap2010:WorkflowViewState.IdRef="FlowStep_178">
                       <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_43" />
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID349" sap2010:WorkflowViewState.IdRef="FlowStep_184">
+                <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID351" sap2010:WorkflowViewState.IdRef="FlowStep_184">
                   <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfStateNot="Created" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CodeExecutionResult="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_64" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID363" sap2010:WorkflowViewState.IdRef="FlowStep_183">
+                    <p1:FlowStep x:Name="__ReferenceID365" sap2010:WorkflowViewState.IdRef="FlowStep_183">
                       <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_10" />
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID359" sap2010:WorkflowViewState.IdRef="FlowStep_187">
+                <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID361" sap2010:WorkflowViewState.IdRef="FlowStep_187">
                   <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" CssClass="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_65" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Draft" RunAsUICommand="False" Title="StopScheduleAction" />
                   <p1:FlowStep.Next>
-                    <p1:FlowStep x:Name="__ReferenceID361" sap2010:WorkflowViewState.IdRef="FlowStep_186">
+                    <p1:FlowStep x:Name="__ReferenceID363" sap2010:WorkflowViewState.IdRef="FlowStep_186">
                       <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_9">
                         <p1:Assign.To>
                           <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -1432,36 +1433,36 @@
                         </p1:Assign.Value>
                       </p1:Assign>
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID360" sap2010:WorkflowViewState.IdRef="FlowStep_185">
+                        <p1:FlowStep x:Name="__ReferenceID362" sap2010:WorkflowViewState.IdRef="FlowStep_185">
                           <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_45" />
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
                   </p1:FlowStep.Next>
                 </p1:FlowStep>
-                <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID365" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID367" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                   <p1:FlowDecision.True>
-                    <p1:FlowStep x:Name="__ReferenceID364" sap2010:WorkflowViewState.IdRef="FlowStep_189">
+                    <p1:FlowStep x:Name="__ReferenceID366" sap2010:WorkflowViewState.IdRef="FlowStep_189">
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfState="Draft" AvailableOnlyIfStateNot="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_66" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Published" RunAsUICommand="False" Title="DiscardDraftAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID366" sap2010:WorkflowViewState.IdRef="FlowStep_188">
+                        <p1:FlowStep x:Name="__ReferenceID368" sap2010:WorkflowViewState.IdRef="FlowStep_188">
                           <tswa:ExecuteCodeActivity CodeExecutionResult="[masterFluent.GetLive().CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_46" />
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
                   </p1:FlowDecision.True>
                   <p1:FlowDecision.False>
-                    <p1:FlowStep x:Name="__ReferenceID346" sap2010:WorkflowViewState.IdRef="FlowStep_190">
+                    <p1:FlowStep x:Name="__ReferenceID348" sap2010:WorkflowViewState.IdRef="FlowStep_190">
                       <p1:Throw Exception="[New InvalidWorkflowOperationException(operationName)]" sap2010:WorkflowViewState.IdRef="Throw_4" />
                     </p1:FlowStep>
                   </p1:FlowDecision.False>
                 </p1:FlowDecision>
-                <p1:FlowDecision x:Key="Unpublish" x:Name="__ReferenceID367" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                <p1:FlowDecision x:Key="Unpublish" x:Name="__ReferenceID369" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
                   <p1:FlowDecision.True>
-                    <p1:FlowStep x:Name="__ReferenceID353" sap2010:WorkflowViewState.IdRef="FlowStep_182">
+                    <p1:FlowStep x:Name="__ReferenceID355" sap2010:WorkflowViewState.IdRef="FlowStep_182">
                       <tswa:DecisionActivity ActionName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" ArgumentDialogName="" AvailableOnlyIfState="Published" AvailableOnlyIfStateNot="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn sfSave" DisplayName="Unpublish" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_63" MultilingualWarning="UnPublishInMultilingualWarning" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID362" sap2010:WorkflowViewState.IdRef="FlowStep_181">
+                        <p1:FlowStep x:Name="__ReferenceID364" sap2010:WorkflowViewState.IdRef="FlowStep_181">
                           <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_8">
                             <p1:Assign.To>
                               <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -1471,7 +1472,7 @@
                             </p1:Assign.Value>
                           </p1:Assign>
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID354" sap2010:WorkflowViewState.IdRef="FlowStep_180">
+                            <p1:FlowStep x:Name="__ReferenceID356" sap2010:WorkflowViewState.IdRef="FlowStep_180">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(&#xA;If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).GetLive().Unpublish().SaveChanges(),&#xA;masterFluent.GetLive().Unpublish().SaveChanges()), Boolean)]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_44" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
@@ -1480,12 +1481,10 @@
                     </p1:FlowStep>
                   </p1:FlowDecision.True>
                   <p1:FlowDecision.False>
-                    <x:Reference>__ReferenceID346</x:Reference>
+                    <x:Reference>__ReferenceID348</x:Reference>
                   </p1:FlowDecision.False>
                 </p1:FlowDecision>
               </p1:FlowSwitch>
-              <x:Reference>__ReferenceID347</x:Reference>
-              <x:Reference>__ReferenceID348</x:Reference>
               <x:Reference>__ReferenceID349</x:Reference>
               <x:Reference>__ReferenceID350</x:Reference>
               <x:Reference>__ReferenceID351</x:Reference>
@@ -1496,81 +1495,82 @@
               <x:Reference>__ReferenceID356</x:Reference>
               <x:Reference>__ReferenceID357</x:Reference>
               <x:Reference>__ReferenceID358</x:Reference>
+              <x:Reference>__ReferenceID359</x:Reference>
+              <x:Reference>__ReferenceID360</x:Reference>
               <p1:FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_176">
                 <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).Publish().SaveChanges(),&#xA;masterFluent.Publish().SaveChanges()), Boolean)]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_42" />
               </p1:FlowStep>
-              <x:Reference>__ReferenceID359</x:Reference>
-              <x:Reference>__ReferenceID360</x:Reference>
               <x:Reference>__ReferenceID361</x:Reference>
               <x:Reference>__ReferenceID362</x:Reference>
               <x:Reference>__ReferenceID363</x:Reference>
               <x:Reference>__ReferenceID364</x:Reference>
               <x:Reference>__ReferenceID365</x:Reference>
               <x:Reference>__ReferenceID366</x:Reference>
-              <x:Reference>__ReferenceID346</x:Reference>
               <x:Reference>__ReferenceID367</x:Reference>
-              <x:Reference>__ReferenceID345</x:Reference>
+              <x:Reference>__ReferenceID368</x:Reference>
+              <x:Reference>__ReferenceID348</x:Reference>
+              <x:Reference>__ReferenceID369</x:Reference>
+              <x:Reference>__ReferenceID347</x:Reference>
             </p1:Flowchart>
             <p1:FlowStep.Next>
-              <x:Reference>__ReferenceID210</x:Reference>
+              <x:Reference>__ReferenceID211</x:Reference>
             </p1:FlowStep.Next>
           </p1:FlowStep>
         </p1:FlowSwitch.Default>
-        <x:Reference>__ReferenceID211<x:Key>StandardOneStep</x:Key></x:Reference>
-        <x:Reference>__ReferenceID212<x:Key>StandardTwoStep</x:Key></x:Reference>
-        <p1:FlowStep x:Key="StandardThreeStep" x:Name="__ReferenceID370" sap2010:WorkflowViewState.IdRef="FlowStep_278">
-          <p1:Flowchart DisplayName="Three Levels Approval Workflow" sap2010:WorkflowViewState.IdRef="Flowchart_21" StartNode="{x:Reference __ReferenceID344}">
-            <p1:FlowStep x:Name="__ReferenceID272" sap2010:WorkflowViewState.IdRef="FlowStep_208">
-              <p1:Flowchart DisplayName="Awaiting publishing workflow" sap2010:WorkflowViewState.IdRef="Flowchart_16" StartNode="{x:Reference __ReferenceID229}">
-                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID229" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_16">
-                  <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID213" sap2010:WorkflowViewState.IdRef="FlowStep_195">
+        <x:Reference>__ReferenceID212<x:Key>StandardOneStep</x:Key></x:Reference>
+        <x:Reference>__ReferenceID213<x:Key>StandardTwoStep</x:Key></x:Reference>
+        <p1:FlowStep x:Key="StandardThreeStep" x:Name="__ReferenceID372" sap2010:WorkflowViewState.IdRef="FlowStep_278">
+          <p1:Flowchart DisplayName="Three Levels Approval Workflow" sap2010:WorkflowViewState.IdRef="Flowchart_21" StartNode="{x:Reference __ReferenceID346}">
+            <p1:FlowStep x:Name="__ReferenceID273" sap2010:WorkflowViewState.IdRef="FlowStep_208">
+              <p1:Flowchart DisplayName="Awaiting publishing workflow" sap2010:WorkflowViewState.IdRef="Flowchart_16" StartNode="{x:Reference __ReferenceID230}">
+                <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID230" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_16">
+                  <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID214" sap2010:WorkflowViewState.IdRef="FlowStep_195">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_68" Ordinal="0" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingPublishing" RunAsUICommand="False" Title="AwaitingPublishingAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID218" sap2010:WorkflowViewState.IdRef="FlowStep_194">
+                      <p1:FlowStep x:Name="__ReferenceID219" sap2010:WorkflowViewState.IdRef="FlowStep_194">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_48" />
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID215" sap2010:WorkflowViewState.IdRef="FlowStep_197">
+                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID216" sap2010:WorkflowViewState.IdRef="FlowStep_197">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_69" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID228">
+                      <p1:FlowStep x:Name="__ReferenceID229" sap2010:WorkflowViewState.IdRef="FlowStep_383">
                         <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_14" />
-                        <sap2010:WorkflowViewState.IdRef>FlowStep_383</sap2010:WorkflowViewState.IdRef>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID217" sap2010:WorkflowViewState.IdRef="FlowStep_200">
+                  <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID218" sap2010:WorkflowViewState.IdRef="FlowStep_200">
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowRejectDialog" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_70" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="RejectedForPublishing" RunAsUICommand="False" Title="RejectAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID219" sap2010:WorkflowViewState.IdRef="FlowStep_199">
+                      <p1:FlowStep x:Name="__ReferenceID220" sap2010:WorkflowViewState.IdRef="FlowStep_199">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_50" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID220" sap2010:WorkflowViewState.IdRef="FlowStep_198">
+                          <p1:FlowStep x:Name="__ReferenceID221" sap2010:WorkflowViewState.IdRef="FlowStep_198">
                             <tswa:NotifyStateChanger EmailText="An item that you requested to be published was rejected" sap2010:WorkflowViewState.IdRef="NotifyStateChanger_4" State="AwaitingPublishing" />
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID216" sap2010:WorkflowViewState.IdRef="FlowStep_202">
+                  <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID217" sap2010:WorkflowViewState.IdRef="FlowStep_202">
                     <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_71" Ordinal="3" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID225" sap2010:WorkflowViewState.IdRef="FlowStep_201">
+                      <p1:FlowStep x:Name="__ReferenceID226" sap2010:WorkflowViewState.IdRef="FlowStep_201">
                         <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_11" />
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID214" sap2010:WorkflowViewState.IdRef="FlowStep_206">
+                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID215" sap2010:WorkflowViewState.IdRef="FlowStep_206">
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_72" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID224" sap2010:WorkflowViewState.IdRef="FlowStep_205">
+                      <p1:FlowStep x:Name="__ReferenceID225" sap2010:WorkflowViewState.IdRef="FlowStep_205">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_51" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID222" sap2010:WorkflowViewState.IdRef="FlowStep_204">
+                          <p1:FlowStep x:Name="__ReferenceID223" sap2010:WorkflowViewState.IdRef="FlowStep_204">
                             <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_13" OperationName="ScheduledPublish" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID223" sap2010:WorkflowViewState.IdRef="FlowStep_203">
+                              <p1:FlowStep x:Name="__ReferenceID224" sap2010:WorkflowViewState.IdRef="FlowStep_203">
                                 <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_14" OperationName="Unpublish" />
                               </p1:FlowStep>
                             </p1:FlowStep.Next>
@@ -1579,20 +1579,18 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID221" sap2010:WorkflowViewState.IdRef="FlowStep_207">
+                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID222" sap2010:WorkflowViewState.IdRef="FlowStep_207">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_73" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID226" sap2010:WorkflowViewState.IdRef="FlowStep_363">
+                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID227" sap2010:WorkflowViewState.IdRef="FlowStep_363">
                     <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_13" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID227">
+                      <p1:FlowStep x:Name="__ReferenceID228" sap2010:WorkflowViewState.IdRef="FlowStep_384">
                         <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_15" />
-                        <sap2010:WorkflowViewState.IdRef>FlowStep_384</sap2010:WorkflowViewState.IdRef>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
                 </p1:FlowSwitch>
-                <x:Reference>__ReferenceID213</x:Reference>
                 <x:Reference>__ReferenceID214</x:Reference>
                 <x:Reference>__ReferenceID215</x:Reference>
                 <x:Reference>__ReferenceID216</x:Reference>
@@ -1608,38 +1606,39 @@
                 <x:Reference>__ReferenceID226</x:Reference>
                 <x:Reference>__ReferenceID227</x:Reference>
                 <x:Reference>__ReferenceID228</x:Reference>
+                <x:Reference>__ReferenceID229</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
-            <p1:FlowStep x:Name="__ReferenceID252" sap2010:WorkflowViewState.IdRef="FlowStep_221">
+            <p1:FlowStep x:Name="__ReferenceID253" sap2010:WorkflowViewState.IdRef="FlowStep_221">
               <p1:Flowchart DisplayName="Draft item workflow" sap2010:WorkflowViewState.IdRef="Flowchart_17">
                 <p1:Flowchart.Variables>
                   <p1:Variable x:TypeArguments="x:String" Name="variable1" />
                   <p1:Variable x:TypeArguments="x:String" Name="variable2" />
                 </p1:Flowchart.Variables>
                 <p1:Flowchart.StartNode>
-                  <x:Reference>__ReferenceID251</x:Reference>
+                  <x:Reference>__ReferenceID252</x:Reference>
                 </p1:Flowchart.StartNode>
-                <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID232}" x:Name="__ReferenceID251" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_17">
-                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID238" sap2010:WorkflowViewState.IdRef="FlowStep_209">
+                <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID233}" x:Name="__ReferenceID252" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_17">
+                  <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID239" sap2010:WorkflowViewState.IdRef="FlowStep_209">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfStateNot="Created" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_74" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID233" sap2010:WorkflowViewState.IdRef="FlowStep_211">
+                  <p1:FlowStep x:Key="SaveDraft" x:Name="__ReferenceID234" sap2010:WorkflowViewState.IdRef="FlowStep_211">
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_75" Ordinal="0" PersistOnDecision="True" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID236" sap2010:WorkflowViewState.IdRef="FlowStep_210">
+                      <p1:FlowStep x:Name="__ReferenceID237" sap2010:WorkflowViewState.IdRef="FlowStep_210">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_52" />
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowDecision x:Key="Delete" x:Name="__ReferenceID243" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
+                  <p1:FlowDecision x:Key="Delete" x:Name="__ReferenceID244" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
                     <p1:FlowDecision.True>
-                      <p1:FlowStep x:Name="__ReferenceID242" sap2010:WorkflowViewState.IdRef="FlowStep_217">
+                      <p1:FlowStep x:Name="__ReferenceID243" sap2010:WorkflowViewState.IdRef="FlowStep_217">
                         <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_20" WorkflowPermissions="Publish" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID230" sap2010:WorkflowViewState.IdRef="FlowStep_216">
+                          <p1:FlowStep x:Name="__ReferenceID231" sap2010:WorkflowViewState.IdRef="FlowStep_216">
                             <tswa:DecisionActivity ArgumentDialogName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfState="Draft" AvailableOnlyIfStateNot="Created" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_77" Ordinal="1" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID239" sap2010:WorkflowViewState.IdRef="FlowStep_215">
+                              <p1:FlowStep x:Name="__ReferenceID240" sap2010:WorkflowViewState.IdRef="FlowStep_215">
                                 <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_12" />
                               </p1:FlowStep>
                             </p1:FlowStep.Next>
@@ -1648,49 +1647,49 @@
                       </p1:FlowStep>
                     </p1:FlowDecision.True>
                     <p1:FlowDecision.False>
-                      <x:Reference>__ReferenceID230</x:Reference>
+                      <x:Reference>__ReferenceID231</x:Reference>
                     </p1:FlowDecision.False>
                   </p1:FlowDecision>
-                  <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID244" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                  <p1:FlowDecision x:Key="DiscardDraft" x:Name="__ReferenceID245" Condition="[IsItemPublished]" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
                     <p1:FlowDecision.True>
-                      <p1:FlowStep x:Name="__ReferenceID241" sap2010:WorkflowViewState.IdRef="FlowStep_219">
+                      <p1:FlowStep x:Name="__ReferenceID242" sap2010:WorkflowViewState.IdRef="FlowStep_219">
                         <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Draft" AvailableOnlyIfStateNot="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_78" MultilingualWarning="" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Published" RunAsUICommand="False" Title="DiscardDraftAction" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID240" sap2010:WorkflowViewState.IdRef="FlowStep_218">
+                          <p1:FlowStep x:Name="__ReferenceID241" sap2010:WorkflowViewState.IdRef="FlowStep_218">
                             <tswa:ExecuteCodeActivity CodeExecutionResult="[masterFluent.GetLive().CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_54" />
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
                     </p1:FlowDecision.True>
                     <p1:FlowDecision.False>
-                      <p1:FlowStep x:Name="__ReferenceID232" sap2010:WorkflowViewState.IdRef="FlowStep_220">
+                      <p1:FlowStep x:Name="__ReferenceID233" sap2010:WorkflowViewState.IdRef="FlowStep_220">
                         <p1:Throw Exception="[New InvalidWorkflowOperationException(operationName)]" sap2010:WorkflowViewState.IdRef="Throw_5" />
                       </p1:FlowStep>
                     </p1:FlowDecision.False>
                   </p1:FlowDecision>
-                  <p1:FlowStep x:Key="SendForReview" x:Name="__ReferenceID234" sap2010:WorkflowViewState.IdRef="FlowStep_214">
+                  <p1:FlowStep x:Key="SendForReview" x:Name="__ReferenceID235" sap2010:WorkflowViewState.IdRef="FlowStep_214">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_76" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingReview" RunAsUICommand="False" Title="SendForReviewAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID235" sap2010:WorkflowViewState.IdRef="FlowStep_213">
+                      <p1:FlowStep x:Name="__ReferenceID236" sap2010:WorkflowViewState.IdRef="FlowStep_213">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_53" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID237" sap2010:WorkflowViewState.IdRef="FlowStep_212">
+                          <p1:FlowStep x:Name="__ReferenceID238" sap2010:WorkflowViewState.IdRef="FlowStep_212">
                             <tswa:NotifyGroup EmailText="Content or Page has been submitted for your approval in Sitefinity CMS. To see it, log in to Sitefinity Administration and review Awaiting review items. " Group="Review" sap2010:WorkflowViewState.IdRef="NotifyGroup_5" />
                           </p1:FlowStep>
                         </p1:FlowStep.Next>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID249" sap2010:WorkflowViewState.IdRef="FlowStep_325">
+                  <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID250" sap2010:WorkflowViewState.IdRef="FlowStep_325">
                     <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_111" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID248" sap2010:WorkflowViewState.IdRef="FlowStep_324">
+                      <p1:FlowStep x:Name="__ReferenceID249" sap2010:WorkflowViewState.IdRef="FlowStep_324">
                         <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_81" />
                         <p1:FlowStep.Next>
-                          <p1:FlowStep x:Name="__ReferenceID247" sap2010:WorkflowViewState.IdRef="FlowStep_323">
+                          <p1:FlowStep x:Name="__ReferenceID248" sap2010:WorkflowViewState.IdRef="FlowStep_323">
                             <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_29" OperationName="ScheduledPublish" />
                             <p1:FlowStep.Next>
-                              <p1:FlowStep x:Name="__ReferenceID246" sap2010:WorkflowViewState.IdRef="FlowStep_322">
+                              <p1:FlowStep x:Name="__ReferenceID247" sap2010:WorkflowViewState.IdRef="FlowStep_322">
                                 <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_30" OperationName="Unpublish" />
                               </p1:FlowStep>
                             </p1:FlowStep.Next>
@@ -1699,34 +1698,32 @@
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID245" sap2010:WorkflowViewState.IdRef="FlowStep_327">
+                  <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID246" sap2010:WorkflowViewState.IdRef="FlowStep_327">
                     <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_112" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                     <p1:FlowStep.Next>
-                      <p1:FlowStep x:Name="__ReferenceID231">
+                      <p1:FlowStep x:Name="__ReferenceID232" sap2010:WorkflowViewState.IdRef="FlowStep_385">
                         <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_16" />
-                        <sap2010:WorkflowViewState.IdRef>FlowStep_385</sap2010:WorkflowViewState.IdRef>
                       </p1:FlowStep>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
-                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID250" sap2010:WorkflowViewState.IdRef="FlowStep_365">
+                  <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID251" sap2010:WorkflowViewState.IdRef="FlowStep_365">
                     <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_14" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                     <p1:FlowStep.Next>
-                      <x:Reference>__ReferenceID231</x:Reference>
+                      <x:Reference>__ReferenceID232</x:Reference>
                     </p1:FlowStep.Next>
                   </p1:FlowStep>
                 </p1:FlowSwitch>
-                <x:Reference>__ReferenceID233</x:Reference>
                 <x:Reference>__ReferenceID234</x:Reference>
                 <x:Reference>__ReferenceID235</x:Reference>
                 <x:Reference>__ReferenceID236</x:Reference>
                 <x:Reference>__ReferenceID237</x:Reference>
                 <x:Reference>__ReferenceID238</x:Reference>
-                <x:Reference>__ReferenceID232</x:Reference>
                 <x:Reference>__ReferenceID239</x:Reference>
+                <x:Reference>__ReferenceID233</x:Reference>
                 <x:Reference>__ReferenceID240</x:Reference>
                 <x:Reference>__ReferenceID241</x:Reference>
-                <x:Reference>__ReferenceID230</x:Reference>
                 <x:Reference>__ReferenceID242</x:Reference>
+                <x:Reference>__ReferenceID231</x:Reference>
                 <x:Reference>__ReferenceID243</x:Reference>
                 <x:Reference>__ReferenceID244</x:Reference>
                 <x:Reference>__ReferenceID245</x:Reference>
@@ -1735,73 +1732,74 @@
                 <x:Reference>__ReferenceID248</x:Reference>
                 <x:Reference>__ReferenceID249</x:Reference>
                 <x:Reference>__ReferenceID250</x:Reference>
-                <x:Reference>__ReferenceID231</x:Reference>
+                <x:Reference>__ReferenceID251</x:Reference>
+                <x:Reference>__ReferenceID232</x:Reference>
               </p1:Flowchart>
             </p1:FlowStep>
-            <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID252}" x:Name="__ReferenceID344" Expression="[itemStatus]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_21">
-              <x:Reference>__ReferenceID252<x:Key>Draft</x:Key></x:Reference>
-              <x:Reference>__ReferenceID252<x:Key>Unpublished</x:Key></x:Reference>
-              <p1:FlowStep x:Key="AwaitingApproval" x:Name="__ReferenceID318" sap2010:WorkflowViewState.IdRef="FlowStep_234">
+            <p1:FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID253}" x:Name="__ReferenceID346" Expression="[itemStatus]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_21">
+              <x:Reference>__ReferenceID253<x:Key>Draft</x:Key></x:Reference>
+              <x:Reference>__ReferenceID253<x:Key>Unpublished</x:Key></x:Reference>
+              <p1:FlowStep x:Key="AwaitingApproval" x:Name="__ReferenceID320" sap2010:WorkflowViewState.IdRef="FlowStep_234">
                 <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_21" WorkflowPermissions="Approve" />
                 <p1:FlowStep.Next>
-                  <p1:FlowStep x:Name="__ReferenceID340" sap2010:WorkflowViewState.IdRef="FlowStep_233">
-                    <p1:Flowchart DisplayName="Awaiting approval workflow" sap2010:WorkflowViewState.IdRef="Flowchart_18" StartNode="{x:Reference __ReferenceID271}">
-                      <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID271" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_18">
-                        <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID254" sap2010:WorkflowViewState.IdRef="FlowStep_223">
+                  <p1:FlowStep x:Name="__ReferenceID342" sap2010:WorkflowViewState.IdRef="FlowStep_233">
+                    <p1:Flowchart DisplayName="Awaiting approval workflow" sap2010:WorkflowViewState.IdRef="Flowchart_18" StartNode="{x:Reference __ReferenceID272}">
+                      <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID272" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_18">
+                        <p1:FlowStep x:Key="SaveAsAwaitingApproval" x:Name="__ReferenceID255" sap2010:WorkflowViewState.IdRef="FlowStep_223">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_79" Ordinal="0" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingApproval" RunAsUICommand="False" Title="AwaitingApprovalAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID258" sap2010:WorkflowViewState.IdRef="FlowStep_222">
+                            <p1:FlowStep x:Name="__ReferenceID259" sap2010:WorkflowViewState.IdRef="FlowStep_222">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_55" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID257" sap2010:WorkflowViewState.IdRef="FlowStep_226">
+                        <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID258" sap2010:WorkflowViewState.IdRef="FlowStep_226">
                           <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowRejectDialog" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_80" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Rejected" RunAsUICommand="False" Title="RejectAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID260" sap2010:WorkflowViewState.IdRef="FlowStep_225">
+                            <p1:FlowStep x:Name="__ReferenceID261" sap2010:WorkflowViewState.IdRef="FlowStep_225">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_56" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID261" sap2010:WorkflowViewState.IdRef="FlowStep_224">
+                                <p1:FlowStep x:Name="__ReferenceID262" sap2010:WorkflowViewState.IdRef="FlowStep_224">
                                   <tswa:NotifyStateChanger EmailText="Content or Page you submitted for approval in Sitefinity CMS was rejected by an approver. To see it, log in to Sitefinity Administration and review Rejected items." sap2010:WorkflowViewState.IdRef="NotifyStateChanger_5" State="AwaitingApproval" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID256" sap2010:WorkflowViewState.IdRef="FlowStep_228">
+                        <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID257" sap2010:WorkflowViewState.IdRef="FlowStep_228">
                           <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_81" Ordinal="2" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID264" sap2010:WorkflowViewState.IdRef="FlowStep_227">
+                            <p1:FlowStep x:Name="__ReferenceID265" sap2010:WorkflowViewState.IdRef="FlowStep_227">
                               <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_13" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="SendForPublishing" x:Name="__ReferenceID255" sap2010:WorkflowViewState.IdRef="FlowStep_231">
+                        <p1:FlowStep x:Key="SendForPublishing" x:Name="__ReferenceID256" sap2010:WorkflowViewState.IdRef="FlowStep_231">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_82" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingPublishing" RunAsUICommand="False" Title="SendForPublishingAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID259" sap2010:WorkflowViewState.IdRef="FlowStep_230">
+                            <p1:FlowStep x:Name="__ReferenceID260" sap2010:WorkflowViewState.IdRef="FlowStep_230">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_57" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID262" sap2010:WorkflowViewState.IdRef="FlowStep_229">
+                                <p1:FlowStep x:Name="__ReferenceID263" sap2010:WorkflowViewState.IdRef="FlowStep_229">
                                   <tswa:NotifyGroup EmailText="You have new items waiting approval for publishing." Group="Publish" sap2010:WorkflowViewState.IdRef="NotifyGroup_6" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID263" sap2010:WorkflowViewState.IdRef="FlowStep_232">
+                        <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID264" sap2010:WorkflowViewState.IdRef="FlowStep_232">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_83" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID269" sap2010:WorkflowViewState.IdRef="FlowStep_331">
+                        <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID270" sap2010:WorkflowViewState.IdRef="FlowStep_331">
                           <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_113" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID268" sap2010:WorkflowViewState.IdRef="FlowStep_330">
+                            <p1:FlowStep x:Name="__ReferenceID269" sap2010:WorkflowViewState.IdRef="FlowStep_330">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_83" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID267" sap2010:WorkflowViewState.IdRef="FlowStep_329">
+                                <p1:FlowStep x:Name="__ReferenceID268" sap2010:WorkflowViewState.IdRef="FlowStep_329">
                                   <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_31" OperationName="ScheduledPublish" />
                                   <p1:FlowStep.Next>
-                                    <p1:FlowStep x:Name="__ReferenceID266" sap2010:WorkflowViewState.IdRef="FlowStep_328">
+                                    <p1:FlowStep x:Name="__ReferenceID267" sap2010:WorkflowViewState.IdRef="FlowStep_328">
                                       <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_32" OperationName="Unpublish" />
                                     </p1:FlowStep>
                                   </p1:FlowStep.Next>
@@ -1810,23 +1808,21 @@
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID265" sap2010:WorkflowViewState.IdRef="FlowStep_333">
+                        <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID266" sap2010:WorkflowViewState.IdRef="FlowStep_333">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_114" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID253">
+                            <p1:FlowStep x:Name="__ReferenceID254" sap2010:WorkflowViewState.IdRef="FlowStep_386">
                               <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_17" />
-                              <sap2010:WorkflowViewState.IdRef>FlowStep_386</sap2010:WorkflowViewState.IdRef>
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID270" sap2010:WorkflowViewState.IdRef="FlowStep_367">
+                        <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID271" sap2010:WorkflowViewState.IdRef="FlowStep_367">
                           <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_15" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                           <p1:FlowStep.Next>
-                            <x:Reference>__ReferenceID253</x:Reference>
+                            <x:Reference>__ReferenceID254</x:Reference>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
                       </p1:FlowSwitch>
-                      <x:Reference>__ReferenceID254</x:Reference>
                       <x:Reference>__ReferenceID255</x:Reference>
                       <x:Reference>__ReferenceID256</x:Reference>
                       <x:Reference>__ReferenceID257</x:Reference>
@@ -1843,30 +1839,31 @@
                       <x:Reference>__ReferenceID268</x:Reference>
                       <x:Reference>__ReferenceID269</x:Reference>
                       <x:Reference>__ReferenceID270</x:Reference>
-                      <x:Reference>__ReferenceID253</x:Reference>
+                      <x:Reference>__ReferenceID271</x:Reference>
+                      <x:Reference>__ReferenceID254</x:Reference>
                     </p1:Flowchart>
                   </p1:FlowStep>
                 </p1:FlowStep.Next>
               </p1:FlowStep>
-              <p1:FlowStep x:Key="AwaitingPublishing" x:Name="__ReferenceID341" sap2010:WorkflowViewState.IdRef="FlowStep_235">
+              <p1:FlowStep x:Key="AwaitingPublishing" x:Name="__ReferenceID343" sap2010:WorkflowViewState.IdRef="FlowStep_235">
                 <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_22" WorkflowPermissions="Publish" />
                 <p1:FlowStep.Next>
-                  <x:Reference>__ReferenceID272</x:Reference>
+                  <x:Reference>__ReferenceID273</x:Reference>
                 </p1:FlowStep.Next>
               </p1:FlowStep>
-              <p1:FlowStep x:Key="Published" x:Name="__ReferenceID339" sap2010:WorkflowViewState.IdRef="FlowStep_252">
-                <p1:Flowchart DisplayName="Published workflow" sap2010:WorkflowViewState.IdRef="Flowchart_19" StartNode="{x:Reference __ReferenceID293}">
-                  <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID293" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_19">
-                    <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID276" sap2010:WorkflowViewState.IdRef="FlowStep_236">
+              <p1:FlowStep x:Key="Published" x:Name="__ReferenceID341" sap2010:WorkflowViewState.IdRef="FlowStep_252">
+                <p1:Flowchart DisplayName="Published workflow" sap2010:WorkflowViewState.IdRef="Flowchart_19" StartNode="{x:Reference __ReferenceID295}">
+                  <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID295" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_19">
+                    <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID277" sap2010:WorkflowViewState.IdRef="FlowStep_236">
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_84" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID282" sap2010:WorkflowViewState.IdRef="FlowStep_240">
+                    <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID283" sap2010:WorkflowViewState.IdRef="FlowStep_240">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_23" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID275" sap2010:WorkflowViewState.IdRef="FlowStep_239">
+                        <p1:FlowStep x:Name="__ReferenceID276" sap2010:WorkflowViewState.IdRef="FlowStep_239">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Published" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_85" MultilingualWarning="UnPublishInMultilingualWarning" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID280" sap2010:WorkflowViewState.IdRef="FlowStep_238">
+                            <p1:FlowStep x:Name="__ReferenceID281" sap2010:WorkflowViewState.IdRef="FlowStep_238">
                               <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_10">
                                 <p1:Assign.To>
                                   <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -1876,7 +1873,7 @@
                                 </p1:Assign.Value>
                               </p1:Assign>
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID279" sap2010:WorkflowViewState.IdRef="FlowStep_237">
+                                <p1:FlowStep x:Name="__ReferenceID280" sap2010:WorkflowViewState.IdRef="FlowStep_237">
                                   <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(&#xA;If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).GetLive().Unpublish().SaveChanges(),&#xA;masterFluent.GetLive().Unpublish().SaveChanges()), Boolean)]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_58" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
@@ -1885,10 +1882,10 @@
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID277" sap2010:WorkflowViewState.IdRef="FlowStep_243">
+                    <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID278" sap2010:WorkflowViewState.IdRef="FlowStep_243">
                       <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_86" Ordinal="1" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID281" sap2010:WorkflowViewState.IdRef="FlowStep_242">
+                        <p1:FlowStep x:Name="__ReferenceID282" sap2010:WorkflowViewState.IdRef="FlowStep_242">
                           <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_11">
                             <p1:Assign.To>
                               <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -1898,44 +1895,50 @@
                             </p1:Assign.Value>
                           </p1:Assign>
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID278" sap2010:WorkflowViewState.IdRef="FlowStep_241">
+                            <p1:FlowStep x:Name="__ReferenceID279" sap2010:WorkflowViewState.IdRef="FlowStep_241">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_59" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID283" sap2010:WorkflowViewState.IdRef="FlowStep_246">
+                    <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID284" sap2010:WorkflowViewState.IdRef="FlowStep_246">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_24" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID274" sap2010:WorkflowViewState.IdRef="FlowStep_245">
+                        <p1:FlowStep x:Name="__ReferenceID275" sap2010:WorkflowViewState.IdRef="FlowStep_245">
                           <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_87" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID284" sap2010:WorkflowViewState.IdRef="FlowStep_244">
+                            <p1:FlowStep x:Name="__ReferenceID285" sap2010:WorkflowViewState.IdRef="FlowStep_244">
                               <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_14" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="SendForReview" x:Name="__ReferenceID286" sap2010:WorkflowViewState.IdRef="FlowStep_248">
+                    <p1:FlowStep x:Key="SendForReview" x:Name="__ReferenceID287" sap2010:WorkflowViewState.IdRef="FlowStep_248">
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_88" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingReview" RunAsUICommand="False" Title="SendForReviewAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID285" sap2010:WorkflowViewState.IdRef="FlowStep_247">
+                        <p1:FlowStep x:Name="__ReferenceID286" sap2010:WorkflowViewState.IdRef="FlowStep_247">
                           <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_60" />
+                          <p1:FlowStep.Next>
+                            <p1:FlowStep x:Name="__ReferenceID294">
+                              <tswa:NotifyGroup EmailText="You have new items awaiting review." Group="Review" sap2010:WorkflowViewState.IdRef="NotifyGroup_9" />
+                              <sap2010:WorkflowViewState.IdRef>FlowStep_391</sap2010:WorkflowViewState.IdRef>
+                            </p1:FlowStep>
+                          </p1:FlowStep.Next>
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID291" sap2010:WorkflowViewState.IdRef="FlowStep_337">
+                    <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID292" sap2010:WorkflowViewState.IdRef="FlowStep_337">
                       <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_115" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID290" sap2010:WorkflowViewState.IdRef="FlowStep_336">
+                        <p1:FlowStep x:Name="__ReferenceID291" sap2010:WorkflowViewState.IdRef="FlowStep_336">
                           <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_85" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID289" sap2010:WorkflowViewState.IdRef="FlowStep_335">
+                            <p1:FlowStep x:Name="__ReferenceID290" sap2010:WorkflowViewState.IdRef="FlowStep_335">
                               <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_33" OperationName="ScheduledPublish" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID288" sap2010:WorkflowViewState.IdRef="FlowStep_334">
+                                <p1:FlowStep x:Name="__ReferenceID289" sap2010:WorkflowViewState.IdRef="FlowStep_334">
                                   <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_34" OperationName="Unpublish" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
@@ -1944,23 +1947,21 @@
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID287" sap2010:WorkflowViewState.IdRef="FlowStep_339">
+                    <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID288" sap2010:WorkflowViewState.IdRef="FlowStep_339">
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_116" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID273">
+                        <p1:FlowStep x:Name="__ReferenceID274" sap2010:WorkflowViewState.IdRef="FlowStep_387">
                           <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_18" />
-                          <sap2010:WorkflowViewState.IdRef>FlowStep_387</sap2010:WorkflowViewState.IdRef>
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID292" sap2010:WorkflowViewState.IdRef="FlowStep_361">
+                    <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID293" sap2010:WorkflowViewState.IdRef="FlowStep_361">
                       <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_12" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                       <p1:FlowStep.Next>
-                        <x:Reference>__ReferenceID273</x:Reference>
+                        <x:Reference>__ReferenceID274</x:Reference>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
                   </p1:FlowSwitch>
-                  <x:Reference>__ReferenceID274</x:Reference>
                   <x:Reference>__ReferenceID275</x:Reference>
                   <x:Reference>__ReferenceID276</x:Reference>
                   <x:Reference>__ReferenceID277</x:Reference>
@@ -1979,31 +1980,32 @@
                   <x:Reference>__ReferenceID290</x:Reference>
                   <x:Reference>__ReferenceID291</x:Reference>
                   <x:Reference>__ReferenceID292</x:Reference>
-                  <x:Reference>__ReferenceID273</x:Reference>
+                  <x:Reference>__ReferenceID293</x:Reference>
+                  <x:Reference>__ReferenceID274</x:Reference>
+                  <x:Reference>__ReferenceID294</x:Reference>
                 </p1:Flowchart>
               </p1:FlowStep>
-              <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID342" sap2010:WorkflowViewState.IdRef="FlowStep_277">
-                <p1:Flowchart DisplayName="Scheduled workflow" sap2010:WorkflowViewState.IdRef="Flowchart_20" StartNode="{x:Reference __ReferenceID317}">
-                  <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID317" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_20">
-                    <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID304" sap2010:WorkflowViewState.IdRef="FlowStep_254">
+              <p1:FlowStep x:Key="Scheduled" x:Name="__ReferenceID344" sap2010:WorkflowViewState.IdRef="FlowStep_277">
+                <p1:Flowchart DisplayName="Scheduled workflow" sap2010:WorkflowViewState.IdRef="Flowchart_20" StartNode="{x:Reference __ReferenceID319}">
+                  <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID319" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_20">
+                    <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID306" sap2010:WorkflowViewState.IdRef="FlowStep_254">
                       <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_4" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID294">
+                        <p1:FlowStep x:Name="__ReferenceID296" sap2010:WorkflowViewState.IdRef="FlowStep_388">
                           <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_19" />
-                          <sap2010:WorkflowViewState.IdRef>FlowStep_388</sap2010:WorkflowViewState.IdRef>
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID299" sap2010:WorkflowViewState.IdRef="FlowStep_255">
+                    <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID301" sap2010:WorkflowViewState.IdRef="FlowStep_255">
                       <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" DisplayName="Preview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_89" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID311" sap2010:WorkflowViewState.IdRef="FlowStep_259">
+                    <p1:FlowStep x:Key="Unpublish" x:Name="__ReferenceID313" sap2010:WorkflowViewState.IdRef="FlowStep_259">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_25" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID298" sap2010:WorkflowViewState.IdRef="FlowStep_258">
+                        <p1:FlowStep x:Name="__ReferenceID300" sap2010:WorkflowViewState.IdRef="FlowStep_258">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Published" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_90" MultilingualWarning="UnPublishInMultilingualWarning" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="Unpublished" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="UnpublishAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID310" sap2010:WorkflowViewState.IdRef="FlowStep_257">
+                            <p1:FlowStep x:Name="__ReferenceID312" sap2010:WorkflowViewState.IdRef="FlowStep_257">
                               <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_12">
                                 <p1:Assign.To>
                                   <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -2013,7 +2015,7 @@
                                 </p1:Assign.Value>
                               </p1:Assign>
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID305" sap2010:WorkflowViewState.IdRef="FlowStep_256">
+                                <p1:FlowStep x:Name="__ReferenceID307" sap2010:WorkflowViewState.IdRef="FlowStep_256">
                                   <tswa:ExecuteCodeActivity CodeExecutionResult="[CType(&#xA;If(masterFluent.IsCheckedOut(),&#xA;fluent.CopyToMaster(True).GetLive().Unpublish().SaveChanges(),&#xA;masterFluent.GetLive().Unpublish().SaveChanges()), Boolean)]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_63" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
@@ -2022,24 +2024,24 @@
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID312" sap2010:WorkflowViewState.IdRef="FlowStep_262">
+                    <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID314" sap2010:WorkflowViewState.IdRef="FlowStep_262">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_26" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID296" sap2010:WorkflowViewState.IdRef="FlowStep_261">
+                        <p1:FlowStep x:Name="__ReferenceID298" sap2010:WorkflowViewState.IdRef="FlowStep_261">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_91" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                           <p1:FlowStep.Next>
-                            <x:Reference>__ReferenceID294</x:Reference>
+                            <x:Reference>__ReferenceID296</x:Reference>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID313" sap2010:WorkflowViewState.IdRef="FlowStep_266">
+                    <p1:FlowStep x:Key="StopSchedule" x:Name="__ReferenceID315" sap2010:WorkflowViewState.IdRef="FlowStep_266">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_27" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID308" sap2010:WorkflowViewState.IdRef="FlowStep_265">
+                        <p1:FlowStep x:Name="__ReferenceID310" sap2010:WorkflowViewState.IdRef="FlowStep_265">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" CssClass="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfState="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_92" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Inclusive" ResultStatus="AwaitingPublishing" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="StopScheduleAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID309" sap2010:WorkflowViewState.IdRef="FlowStep_264">
+                            <p1:FlowStep x:Name="__ReferenceID311" sap2010:WorkflowViewState.IdRef="FlowStep_264">
                               <p1:Assign DisplayName="Clear Expiration Date" sap2010:WorkflowViewState.IdRef="Assign_13">
                                 <p1:Assign.To>
                                   <p1:OutArgument x:TypeArguments="s:Nullable(s:DateTime)">[CType(workflowItem,Content).ExpirationDate]</p1:OutArgument>
@@ -2049,7 +2051,7 @@
                                 </p1:Assign.Value>
                               </p1:Assign>
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID307" sap2010:WorkflowViewState.IdRef="FlowStep_263">
+                                <p1:FlowStep x:Name="__ReferenceID309" sap2010:WorkflowViewState.IdRef="FlowStep_263">
                                   <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_65" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
@@ -2058,19 +2060,19 @@
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID314" sap2010:WorkflowViewState.IdRef="FlowStep_271">
+                    <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID316" sap2010:WorkflowViewState.IdRef="FlowStep_271">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_28" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID295" sap2010:WorkflowViewState.IdRef="FlowStep_270">
+                        <p1:FlowStep x:Name="__ReferenceID297" sap2010:WorkflowViewState.IdRef="FlowStep_270">
                           <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_93" Ordinal="3" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID306" sap2010:WorkflowViewState.IdRef="FlowStep_269">
+                            <p1:FlowStep x:Name="__ReferenceID308" sap2010:WorkflowViewState.IdRef="FlowStep_269">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_66" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID302" sap2010:WorkflowViewState.IdRef="FlowStep_268">
+                                <p1:FlowStep x:Name="__ReferenceID304" sap2010:WorkflowViewState.IdRef="FlowStep_268">
                                   <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_17" OperationName="ScheduledPublish" />
                                   <p1:FlowStep.Next>
-                                    <p1:FlowStep x:Name="__ReferenceID303" sap2010:WorkflowViewState.IdRef="FlowStep_267">
+                                    <p1:FlowStep x:Name="__ReferenceID305" sap2010:WorkflowViewState.IdRef="FlowStep_267">
                                       <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_18" OperationName="Unpublish" />
                                     </p1:FlowStep>
                                   </p1:FlowStep.Next>
@@ -2081,21 +2083,21 @@
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID300" sap2010:WorkflowViewState.IdRef="FlowStep_273">
+                    <p1:FlowStep x:Key="SaveAsDraft" x:Name="__ReferenceID302" sap2010:WorkflowViewState.IdRef="FlowStep_273">
                       <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_94" Ordinal="1" PersistOnDecision="True" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Draft" RunAsUICommand="False" Title="SaveAsDraftAction" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID301" sap2010:WorkflowViewState.IdRef="FlowStep_272">
+                        <p1:FlowStep x:Name="__ReferenceID303" sap2010:WorkflowViewState.IdRef="FlowStep_272">
                           <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_67" />
                         </p1:FlowStep>
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
-                    <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID315" sap2010:WorkflowViewState.IdRef="FlowStep_276">
+                    <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID317" sap2010:WorkflowViewState.IdRef="FlowStep_276">
                       <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_29" WorkflowPermissions="Publish" />
                       <p1:FlowStep.Next>
-                        <p1:FlowStep x:Name="__ReferenceID297" sap2010:WorkflowViewState.IdRef="FlowStep_275">
+                        <p1:FlowStep x:Name="__ReferenceID299" sap2010:WorkflowViewState.IdRef="FlowStep_275">
                           <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" DisplayName="Delete" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_95" Ordinal="5" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID316" sap2010:WorkflowViewState.IdRef="FlowStep_274">
+                            <p1:FlowStep x:Name="__ReferenceID318" sap2010:WorkflowViewState.IdRef="FlowStep_274">
                               <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_15" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
@@ -2103,8 +2105,6 @@
                       </p1:FlowStep.Next>
                     </p1:FlowStep>
                   </p1:FlowSwitch>
-                  <x:Reference>__ReferenceID295</x:Reference>
-                  <x:Reference>__ReferenceID296</x:Reference>
                   <x:Reference>__ReferenceID297</x:Reference>
                   <x:Reference>__ReferenceID298</x:Reference>
                   <x:Reference>__ReferenceID299</x:Reference>
@@ -2125,71 +2125,73 @@
                   <x:Reference>__ReferenceID314</x:Reference>
                   <x:Reference>__ReferenceID315</x:Reference>
                   <x:Reference>__ReferenceID316</x:Reference>
-                  <x:Reference>__ReferenceID294</x:Reference>
+                  <x:Reference>__ReferenceID317</x:Reference>
+                  <x:Reference>__ReferenceID318</x:Reference>
+                  <x:Reference>__ReferenceID296</x:Reference>
                 </p1:Flowchart>
               </p1:FlowStep>
-              <x:Reference>__ReferenceID318<x:Key>RejectedForPublishing</x:Key></x:Reference>
-              <p1:FlowStep x:Key="AwaitingReview" x:Name="__ReferenceID338" sap2010:WorkflowViewState.IdRef="FlowStep_291">
+              <x:Reference>__ReferenceID320<x:Key>RejectedForPublishing</x:Key></x:Reference>
+              <p1:FlowStep x:Key="AwaitingReview" x:Name="__ReferenceID340" sap2010:WorkflowViewState.IdRef="FlowStep_291">
                 <tswa:GuardActivity ContentPermissions="{x:Null}" DenyMode="False" sap2010:WorkflowViewState.IdRef="GuardActivity_30" WorkflowPermissions="Review" />
                 <p1:FlowStep.Next>
-                  <p1:FlowStep x:Name="__ReferenceID343" sap2010:WorkflowViewState.IdRef="FlowStep_290">
-                    <p1:Flowchart DisplayName="Awaiting review workflow" sap2010:WorkflowViewState.IdRef="Flowchart_22" StartNode="{x:Reference __ReferenceID337}">
-                      <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID337" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_22">
-                        <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID323" sap2010:WorkflowViewState.IdRef="FlowStep_283">
+                  <p1:FlowStep x:Name="__ReferenceID345" sap2010:WorkflowViewState.IdRef="FlowStep_290">
+                    <p1:Flowchart DisplayName="Awaiting review workflow" sap2010:WorkflowViewState.IdRef="Flowchart_22" StartNode="{x:Reference __ReferenceID339}">
+                      <p1:FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID339" Expression="[operationName]" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_22">
+                        <p1:FlowStep x:Key="Reject" x:Name="__ReferenceID325" sap2010:WorkflowViewState.IdRef="FlowStep_283">
                           <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowRejectDialog" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_97" Ordinal="0" PersistOnDecision="False" Placeholder="SecondaryActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="RejectedForReview" RunAsUICommand="False" Title="RejectAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID326" sap2010:WorkflowViewState.IdRef="FlowStep_282">
+                            <p1:FlowStep x:Name="__ReferenceID328" sap2010:WorkflowViewState.IdRef="FlowStep_282">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_69" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID327" sap2010:WorkflowViewState.IdRef="FlowStep_281">
+                                <p1:FlowStep x:Name="__ReferenceID329" sap2010:WorkflowViewState.IdRef="FlowStep_281">
                                   <tswa:NotifyStateChanger EmailText="Content or Page you submitted for approval in Sitefinity CMS was rejected by an approver. To see it, log in to Sitefinity Administration and review Rejected items." sap2010:WorkflowViewState.IdRef="NotifyStateChanger_6" State="AwaitingReview" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID322" sap2010:WorkflowViewState.IdRef="FlowStep_285">
+                        <p1:FlowStep x:Key="Delete" x:Name="__ReferenceID324" sap2010:WorkflowViewState.IdRef="FlowStep_285">
                           <tswa:DecisionActivity ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ActionName="DeleteAction" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_98" Ordinal="2" PersistOnDecision="False" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="" RunAsUICommand="False" Title="DeleteAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID330" sap2010:WorkflowViewState.IdRef="FlowStep_284">
+                            <p1:FlowStep x:Name="__ReferenceID332" sap2010:WorkflowViewState.IdRef="FlowStep_284">
                               <tswa:DeleteContentItemActivity sap2010:WorkflowViewState.IdRef="DeleteContentItemActivity_16" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID329" sap2010:WorkflowViewState.IdRef="FlowStep_289">
+                        <p1:FlowStep x:Key="Preview" x:Name="__ReferenceID331" sap2010:WorkflowViewState.IdRef="FlowStep_289">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ResourceClass="{x:Null}" ResultStatus="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" ContentCommandName="preview" CssClass="sfLinkBtn sfPreview" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_100" Ordinal="1" PersistOnDecision="False" Placeholder="SecondaryActions" RestrictionType="None" RunAsUICommand="True" Title="Preview" />
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="SaveAsAwaitingReview" x:Name="__ReferenceID320" sap2010:WorkflowViewState.IdRef="FlowStep_280">
+                        <p1:FlowStep x:Key="SaveAsAwaitingReview" x:Name="__ReferenceID322" sap2010:WorkflowViewState.IdRef="FlowStep_280">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="False" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_96" Ordinal="0" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingReview" RunAsUICommand="False" Title="SaveAsAwaitingReviewAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID324" sap2010:WorkflowViewState.IdRef="FlowStep_279">
+                            <p1:FlowStep x:Name="__ReferenceID326" sap2010:WorkflowViewState.IdRef="FlowStep_279">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CopyToMaster().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_68" />
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="SendForApproval" x:Name="__ReferenceID321" sap2010:WorkflowViewState.IdRef="FlowStep_288">
+                        <p1:FlowStep x:Key="SendForApproval" x:Name="__ReferenceID323" sap2010:WorkflowViewState.IdRef="FlowStep_288">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="False" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_99" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="AwaitingApproval" RunAsUICommand="False" Title="SendForApprovalAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID325" sap2010:WorkflowViewState.IdRef="FlowStep_287">
+                            <p1:FlowStep x:Name="__ReferenceID327" sap2010:WorkflowViewState.IdRef="FlowStep_287">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn().SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_70" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID328" sap2010:WorkflowViewState.IdRef="FlowStep_286">
+                                <p1:FlowStep x:Name="__ReferenceID330" sap2010:WorkflowViewState.IdRef="FlowStep_286">
                                   <tswa:NotifyGroup EmailText="You have new items waiting approval for publishing." Group="Approve" sap2010:WorkflowViewState.IdRef="NotifyGroup_7" />
                                 </p1:FlowStep>
                               </p1:FlowStep.Next>
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID335" sap2010:WorkflowViewState.IdRef="FlowStep_343">
+                        <p1:FlowStep x:Key="Schedule" x:Name="__ReferenceID337" sap2010:WorkflowViewState.IdRef="FlowStep_343">
                           <tswa:DecisionActivity ActionName="{x:Null}" AvailableOnlyIfState="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" MultilingualWarning="{x:Null}" ArgumentDialogName="WorkflowScheduleDialog" AvailableOnlyIfStateNot="Scheduled" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_117" Ordinal="2" PersistOnDecision="True" Placeholder="OtherActions" ResourceClass="WorkflowResources" RestrictionType="Exclusive" ResultStatus="Scheduled" RunAsUICommand="False" Title="ScheduleAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID334" sap2010:WorkflowViewState.IdRef="FlowStep_342">
+                            <p1:FlowStep x:Name="__ReferenceID336" sap2010:WorkflowViewState.IdRef="FlowStep_342">
                               <tswa:ExecuteCodeActivity CodeExecutionResult="[fluent.CheckIn(True).SaveChanges()]" sap2010:WorkflowViewState.IdRef="ExecuteCodeActivity_87" />
                               <p1:FlowStep.Next>
-                                <p1:FlowStep x:Name="__ReferenceID333" sap2010:WorkflowViewState.IdRef="FlowStep_341">
+                                <p1:FlowStep x:Name="__ReferenceID335" sap2010:WorkflowViewState.IdRef="FlowStep_341">
                                   <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().PublicationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_35" OperationName="ScheduledPublish" />
                                   <p1:FlowStep.Next>
-                                    <p1:FlowStep x:Name="__ReferenceID332" sap2010:WorkflowViewState.IdRef="FlowStep_340">
+                                    <p1:FlowStep x:Name="__ReferenceID334" sap2010:WorkflowViewState.IdRef="FlowStep_340">
                                       <tswa:ScheduleWorkflowCallActivity ExecuteOn="[fluent.Done().Get().ExpirationDate]" sap2010:WorkflowViewState.IdRef="ScheduleWorkflowCallActivity_36" OperationName="Unpublish" />
                                     </p1:FlowStep>
                                   </p1:FlowStep.Next>
@@ -2198,24 +2200,21 @@
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID331" sap2010:WorkflowViewState.IdRef="FlowStep_345">
+                        <p1:FlowStep x:Key="Publish" x:Name="__ReferenceID333" sap2010:WorkflowViewState.IdRef="FlowStep_345">
                           <tswa:DecisionActivity ActionName="{x:Null}" ArgumentDialogName="{x:Null}" AvailableOnlyIfState="{x:Null}" AvailableOnlyIfStateNot="{x:Null}" CodeExecutionResult="{x:Null}" ContentCommandName="{x:Null}" MonolingualWarning="{x:Null}" AvailableOnlyIfUserCanSkipWorkflow="True" ClosesForm="True" CssClass="sfLinkBtn sfSave" HideIfNoStatus="False" HideInUI="False" sap2010:WorkflowViewState.IdRef="DecisionActivity_118" MultilingualWarning="PublishInMultilingualWarning" Ordinal="0" PersistOnDecision="True" Placeholder="MainAction" ResourceClass="WorkflowResources" RestrictionType="None" ResultStatus="Published" RunAsUICommand="False" SynchronizeMultiligualStatuses="True" Title="PublishAction" />
                           <p1:FlowStep.Next>
-                            <p1:FlowStep x:Name="__ReferenceID319">
+                            <p1:FlowStep x:Name="__ReferenceID321" sap2010:WorkflowViewState.IdRef="FlowStep_389">
                               <tswa:PublishItemActivity sap2010:WorkflowViewState.IdRef="PublishItemActivity_20" />
-                              <sap2010:WorkflowViewState.IdRef>FlowStep_389</sap2010:WorkflowViewState.IdRef>
                             </p1:FlowStep>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
-                        <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID336" sap2010:WorkflowViewState.IdRef="FlowStep_369">
+                        <p1:FlowStep x:Key="ScheduledPublish" x:Name="__ReferenceID338" sap2010:WorkflowViewState.IdRef="FlowStep_369">
                           <tswa:SetApprovalStatusActivity ActionName="{x:Null}" sap2010:WorkflowViewState.IdRef="SetApprovalStatusActivity_16" ResultStatus="Published" SynchronizeMultiligualStatuses="True" />
                           <p1:FlowStep.Next>
-                            <x:Reference>__ReferenceID319</x:Reference>
+                            <x:Reference>__ReferenceID321</x:Reference>
                           </p1:FlowStep.Next>
                         </p1:FlowStep>
                       </p1:FlowSwitch>
-                      <x:Reference>__ReferenceID320</x:Reference>
-                      <x:Reference>__ReferenceID321</x:Reference>
                       <x:Reference>__ReferenceID322</x:Reference>
                       <x:Reference>__ReferenceID323</x:Reference>
                       <x:Reference>__ReferenceID324</x:Reference>
@@ -2231,42 +2230,44 @@
                       <x:Reference>__ReferenceID334</x:Reference>
                       <x:Reference>__ReferenceID335</x:Reference>
                       <x:Reference>__ReferenceID336</x:Reference>
-                      <x:Reference>__ReferenceID319</x:Reference>
+                      <x:Reference>__ReferenceID337</x:Reference>
+                      <x:Reference>__ReferenceID338</x:Reference>
+                      <x:Reference>__ReferenceID321</x:Reference>
                     </p1:Flowchart>
                   </p1:FlowStep>
                 </p1:FlowStep.Next>
               </p1:FlowStep>
-              <x:Reference>__ReferenceID252<x:Key>RejectedForReview</x:Key></x:Reference>
-              <x:Reference>__ReferenceID338<x:Key>Rejected</x:Key></x:Reference>
+              <x:Reference>__ReferenceID253<x:Key>RejectedForReview</x:Key></x:Reference>
+              <x:Reference>__ReferenceID340<x:Key>Rejected</x:Key></x:Reference>
             </p1:FlowSwitch>
-            <x:Reference>__ReferenceID339</x:Reference>
-            <x:Reference>__ReferenceID340</x:Reference>
-            <x:Reference>__ReferenceID318</x:Reference>
             <x:Reference>__ReferenceID341</x:Reference>
             <x:Reference>__ReferenceID342</x:Reference>
+            <x:Reference>__ReferenceID320</x:Reference>
             <x:Reference>__ReferenceID343</x:Reference>
-            <x:Reference>__ReferenceID338</x:Reference>
+            <x:Reference>__ReferenceID344</x:Reference>
+            <x:Reference>__ReferenceID345</x:Reference>
+            <x:Reference>__ReferenceID340</x:Reference>
           </p1:Flowchart>
           <p1:FlowStep.Next>
-            <x:Reference>__ReferenceID210</x:Reference>
+            <x:Reference>__ReferenceID211</x:Reference>
           </p1:FlowStep.Next>
         </p1:FlowStep>
       </p1:FlowSwitch>
-      <x:Reference>__ReferenceID369</x:Reference>
-      <x:Reference>__ReferenceID210</x:Reference>
-      <x:Reference>__ReferenceID370</x:Reference>
+      <x:Reference>__ReferenceID371</x:Reference>
+      <x:Reference>__ReferenceID211</x:Reference>
+      <x:Reference>__ReferenceID372</x:Reference>
     </p1:Flowchart>
-    <SendReply Request="{x:Reference __ReferenceID372}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
+    <SendReply Request="{x:Reference __ReferenceID374}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
       <SendParametersContent>
         <p1:InArgument x:TypeArguments="x:String" x:Key="result">[result]</p1:InArgument>
       </SendParametersContent>
     </SendReply>
-    <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
   </p1:Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="255,86" />
-      <sap2010:ViewStateData Id="InitializeWorkflowActivity_1" sap:VirtualizedContainerService.HintSize="255,22" />
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="2010,86" />
+      <sap2010:ViewStateData Id="InitializeWorkflowActivity_1" sap:VirtualizedContainerService.HintSize="2010,22" />
       <sap2010:ViewStateData Id="DecisionActivity_1" sap:VirtualizedContainerService.HintSize="200,59" />
       <sap2010:ViewStateData Id="ExecuteCodeActivity_1" sap:VirtualizedContainerService.HintSize="226,161" />
       <sap2010:ViewStateData Id="FlowStep_1">
@@ -2709,7 +2710,7 @@
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="1591,1770">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4200,12 +4201,28 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="DecisionActivity_67" sap:VirtualizedContainerService.HintSize="200,59" />
       <sap2010:ViewStateData Id="ExecuteCodeActivity_47" sap:VirtualizedContainerService.HintSize="200,161" />
+      <sap2010:ViewStateData Id="NotifyGroup_8" sap:VirtualizedContainerService.HintSize="292,173">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_390">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">1284,193.5</av:Point>
+            <av:Size x:Key="ShapeSize">292,173</av:Size>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_192">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">1010,199.5</av:Point>
             <av:Size x:Key="ShapeSize">200,161</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">160,560.5 160,733.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">1210,280 1284,280</av:PointCollection>
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -4602,7 +4619,7 @@
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_12" sap:VirtualizedContainerService.HintSize="2885,4470">
+      <sap2010:ViewStateData Id="Flowchart_12" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5740,12 +5757,28 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="DecisionActivity_88" sap:VirtualizedContainerService.HintSize="200,59" />
       <sap2010:ViewStateData Id="ExecuteCodeActivity_60" sap:VirtualizedContainerService.HintSize="200,161" />
+      <sap2010:ViewStateData Id="NotifyGroup_9" sap:VirtualizedContainerService.HintSize="292,173">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_391">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">1274,193.5</av:Point>
+            <av:Size x:Key="ShapeSize">292,173</av:Size>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_247">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">1010,199.5</av:Point>
             <av:Size x:Key="ShapeSize">200,161</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">160,560.5 160,733.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">1210,280 1274,280</av:PointCollection>
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -5852,7 +5885,7 @@
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_19" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="Flowchart_19" sap:VirtualizedContainerService.HintSize="2885,4470">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -6390,7 +6423,7 @@
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_21" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="Flowchart_21" sap:VirtualizedContainerService.HintSize="2010,1468">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -6435,19 +6468,19 @@
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="255,86" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="277,489">
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="2010,86" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="2032,1906">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="307,559">
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="2062,1976">
         <sap:WorkflowViewStateService.ViewState>
           <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
-            <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+            <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+            <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
           </scg3:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
